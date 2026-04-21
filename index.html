@@ -466,15 +466,6 @@ footer {
       <a href="#worktrack">WorkTrack</a>
       <a href="#contact" class="nav-cta">Get a Quote</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="#services" class="mobile-nav-link">Services</a>
-    <a href="#pricing" class="mobile-nav-link">Pricing</a>
-    <a href="#worktrack" class="mobile-nav-link">WorkTrack</a>
-    <a href="#contact" class="nav-cta mobile-nav-link">Get a Quote</a>
   </div>
 </nav>
 
@@ -772,24 +763,6 @@ footer {
 </footer>
 
 <script>
-// Hamburger menu
-const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobile-nav');
-hamburger.addEventListener('click', () => {
-  const isOpen = mobileNav.classList.toggle('open');
-  hamburger.classList.toggle('open', isOpen);
-  hamburger.setAttribute('aria-expanded', isOpen);
-  document.body.style.overflow = isOpen ? 'hidden' : '';
-});
-document.querySelectorAll('.mobile-nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileNav.classList.remove('open');
-    hamburger.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  });
-});
-
 // Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -831,113 +804,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 @keyframes itsmb-spin{to{transform:rotate(360deg)}}
 #itsmb-overlay{display:none}
 #itsmb-overlay.open{display:flex}
-
-/* ── MOBILE HAMBURGER ──────────────────────────────── */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-  margin-left: auto;
-}
-.hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--white);
-  border-radius: 2px;
-  transition: all 0.25s ease;
-}
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  background: rgba(12,15,26,0.98);
-  border-top: 1px solid var(--border);
-  padding: 12px 0 20px;
-}
-.mobile-nav.open { display: flex; }
-.mobile-nav a {
-  padding: 14px 24px;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--muted);
-  border-bottom: 1px solid var(--border);
-  transition: color 0.2s;
-}
-.mobile-nav a:last-child { border-bottom: none; }
-.mobile-nav .nav-cta {
-  margin: 12px 24px 0;
-  text-align: center;
-  padding: 14px;
-  border-radius: 8px;
-  background: var(--amber);
-  color: var(--ink);
-  font-weight: 700;
-  border-bottom: none;
-}
-
-/* ── RESPONSIVE ────────────────────────────────────── */
-@media (max-width: 768px) {
-  .hamburger { display: flex; }
-  .nav-links { display: none !important; }
-
-  .hero { padding: 100px 20px 60px; }
-  .hero p { font-size: 16px; }
-  .hero-buttons { flex-direction: column; gap: 10px; }
-  .hero-buttons .btn-primary,
-  .hero-buttons .btn-ghost { width: 100%; text-align: center; padding: 15px 24px; }
-
-  .trust-inner { gap: 20px; }
-  .trust-number { font-size: 24px; }
-
-  .section { padding: 60px 20px; }
-
-  .services-grid { grid-template-columns: 1fr; }
-  .service-card { padding: 24px; }
-
-  .steps { grid-template-columns: 1fr; gap: 16px; }
-
-  .pricing-grid { grid-template-columns: 1fr; }
-  .pricing-card { padding: 28px 24px; }
-  .pricing-card.featured { margin-top: 12px; }
-
-  .industry-grid { grid-template-columns: repeat(2, 1fr); }
-
-  .cta-section { padding: 60px 20px; }
-  .contact-grid { grid-template-columns: 1fr; }
-
-  .footer-inner { flex-direction: column; text-align: center; gap: 12px; }
-  .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
-}
-
-@media (max-width: 480px) {
-  .hero { padding: 84px 16px 48px; }
-  .hero h1 { font-size: clamp(28px, 8vw, 48px); }
-  .hero-tag { font-size: 12px; }
-
-  .section { padding: 48px 16px; }
-  .section-inner { padding: 0; }
-
-  .callout { padding: 24px 16px; gap: 24px; }
-  .callout-text h3 { font-size: 22px; }
-
-  .trust-inner { gap: 16px; }
-  .trust-item { min-width: 80px; }
-
-  .industry-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .industry-pill { padding: 14px 10px; }
-  .industry-emoji { font-size: 26px; }
-
-  nav { padding: 0 16px; }
-  .nav-inner { height: 56px; }
-}
 </style>
 <script src="https://js.stripe.com/v3/"></script>
 <script>
