@@ -5,6 +5,12 @@
   node_bundler = "esbuild"
 
 [[redirects]]
+  from = "/*"
+  to = "https://app.worktracksmb.com/landing"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/checkout-success"
   to = "/checkout-success.html"
   status = 200
