@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorkTrack vs QuickBooks Time (TSheets) — Honest Comparison for SMBs</title>
+<meta name="description" content="Compare WorkTrack vs QuickBooks Time (formerly TSheets). See pricing, features, and why small businesses are switching to WorkTrack's flat-rate model.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0c0f1a;
+    --navy-90:    #1a1d2e;
+    --navy-80:    #282b3d;
+    --navy-60:    #4d5068;
+    --navy-40:    #7a7d93;
+    --navy-20:    #b8bac7;
+    --navy-10:    #dcdde4;
+    --navy-05:    #eeeff3;
+    --white:      #ffffff;
+    --off-white:  #f8f7f4;
+    --amber:      #f5a623;
+    --amber-dark: #d4880c;
+    --amber-light:#fcd581;
+    --amber-pale: #fef3dc;
+    --success:    #2ecc71;
+    --error:      #e74c3c;
+    --font-display: 'Syne', 'Arial Black', sans-serif;
+    --font-body:    'DM Sans', 'Helvetica Neue', sans-serif;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--off-white);
+    color: var(--navy);
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--navy);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--white);
+    text-decoration: none;
+  }
+  nav .logo span { color: var(--amber); }
+  nav a.cta-nav {
+    background: var(--amber);
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+  }
+  nav a.cta-nav:hover { background: var(--amber-dark); }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 80px 32px 64px;
+    text-align: center;
+  }
+  .hero .badge {
+    display: inline-block;
+    background: var(--amber-pale);
+    color: var(--amber-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
+    border-radius: 99px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+  .hero h1 span { color: var(--amber); }
+  .hero p {
+    font-size: 1.125rem;
+    color: var(--navy-20);
+    max-width: 600px;
+    margin: 0 auto 36px;
+  }
+  .hero .verdict {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(245,166,35,0.12);
+    border: 1px solid rgba(245,166,35,0.3);
+    border-radius: var(--radius-md);
+    padding: 14px 24px;
+    font-size: 0.95rem;
+    color: var(--amber-light);
+  }
+  .hero .verdict strong { color: var(--amber); }
+
+  /* CONTAINER */
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* SECTION */
+  section { padding: 64px 0; }
+  section + section { border-top: 1px solid var(--navy-10); }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .section-sub {
+    color: var(--navy-60);
+    font-size: 1.05rem;
+    margin-bottom: 40px;
+  }
+
+  /* COST CALLOUT */
+  .cost-callout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 600px) { .cost-callout { grid-template-columns: 1fr; } }
+
+  .cost-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    border: 2px solid var(--navy-10);
+    text-align: center;
+  }
+  .cost-card.winner {
+    border-color: var(--amber);
+    background: var(--amber-pale);
+  }
+  .cost-card .brand {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--navy-40);
+    margin-bottom: 8px;
+  }
+  .cost-card.winner .brand { color: var(--amber-dark); }
+  .cost-card .price {
+    font-family: var(--font-display);
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .cost-card.winner .price { color: var(--amber-dark); }
+  .cost-card .price-note {
+    font-size: 0.85rem;
+    color: var(--navy-60);
+    margin-bottom: 16px;
+  }
+  .cost-card .yearly {
+    font-size: 0.9rem;
+    color: var(--navy-60);
+    padding-top: 16px;
+    border-top: 1px solid var(--navy-10);
+  }
+  .cost-card.winner .yearly { border-color: rgba(213,136,12,0.2); }
+
+  .savings-banner {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .savings-banner p { font-size: 1rem; color: var(--navy-20); margin-bottom: 4px; }
+  .savings-banner .number {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--amber);
+  }
+  .savings-banner small { font-size: 0.85rem; color: var(--navy-40); }
+
+  /* COMPARISON TABLE */
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    background: var(--white);
+  }
+  .comp-table thead tr {
+    background: var(--navy);
+    color: var(--white);
+  }
+  .comp-table thead th {
+    padding: 16px 20px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+  .comp-table thead th:first-child { width: 40%; }
+  .comp-table thead th.highlight { color: var(--amber); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--navy-05); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:hover { background: var(--navy-05); }
+  .comp-table td {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    vertical-align: middle;
+  }
+  .comp-table td:first-child { color: var(--navy-60); font-weight: 500; }
+  .comp-table td.worktrack { font-weight: 600; color: var(--navy); }
+  .comp-table td.tsheets { color: var(--navy-40); }
+
+  .check { color: var(--success); font-size: 1.1rem; }
+  .cross { color: var(--error); font-size: 1.1rem; }
+  .partial { color: var(--amber-dark); font-size: 1.1rem; }
+
+  /* PAIN POINTS */
+  .pain-list {
+    display: grid;
+    gap: 16px;
+  }
+  .pain-item {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    border-left: 4px solid var(--error);
+  }
+  .pain-item .icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .pain-item h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .pain-item p { font-size: 0.9rem; color: var(--navy-60); }
+
+  /* TESTIMONIALS */
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 600px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
+  .testimonial {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    border: 1px solid var(--navy-10);
+  }
+  .testimonial .stars { color: var(--amber); font-size: 1rem; margin-bottom: 12px; }
+  .testimonial blockquote {
+    font-size: 0.95rem;
+    color: var(--navy);
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+  .testimonial .author {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy-60);
+  }
+
+  /* FAQ */
+  .faq-list { display: grid; gap: 16px; }
+  .faq-item {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    border: 1px solid var(--navy-10);
+  }
+  .faq-item h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--navy);
+  }
+  .faq-item p { font-size: 0.9rem; color: var(--navy-60); line-height: 1.6; }
+
+  /* VERDICT BOX */
+  .verdict-box {
+    background: var(--navy);
+    border-radius: var(--radius-lg);
+    padding: 48px 40px;
+    text-align: center;
+    color: var(--white);
+  }
+  .verdict-box h2 { color: var(--white); margin-bottom: 12px; }
+  .verdict-box p { color: var(--navy-20); max-width: 560px; margin: 0 auto 32px; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--amber);
+    color: var(--navy);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 16px 36px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+  }
+  .btn-primary:hover { background: var(--amber-dark); }
+  .verdict-box .sub-link {
+    display: block;
+    margin-top: 16px;
+    font-size: 0.875rem;
+    color: var(--navy-40);
+    text-decoration: none;
+  }
+  .verdict-box .sub-link:hover { color: var(--navy-20); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy-90);
+    color: var(--navy-40);
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--navy-20); text-decoration: none; }
+
+  /* SCHEMA MARKUP NOTE — hidden */
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+</style>
+
+<!-- Schema Markup for AI + Search -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "WorkTrack vs QuickBooks Time (TSheets) Comparison",
+  "description": "Detailed comparison of WorkTrack and QuickBooks Time (formerly TSheets) for small businesses. Covers pricing, features, GPS tracking, and support.",
+  "url": "https://worktracksmb.com/worktrack-vs-tsheets",
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is WorkTrack cheaper than QuickBooks Time (TSheets)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. WorkTrack uses flat-rate pricing starting at $497 one-time, while QuickBooks Time charges $20/month base plus $10/user/month. For a 20-person team, that's $2,520–$5,280 per year for QuickBooks Time versus WorkTrack's one-time fee. Over 3 years, WorkTrack saves businesses over $15,000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a QuickBooks subscription to use QuickBooks Time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "QuickBooks Time works standalone but is designed to integrate with QuickBooks Online, which adds $30–$200/month. WorkTrack does not require any additional subscription."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does WorkTrack have GPS time tracking like TSheets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. WorkTrack includes GPS clock-in/out, geofencing, and real-time location tracking for field employees — all included in the flat-rate price with no per-user fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the main reasons businesses switch from TSheets to WorkTrack?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most common reasons are: (1) per-user pricing that grows with the team, (2) requiring a QuickBooks Online subscription, (3) mobile app instability after the Intuit acquisition, and (4) long wait times for support."
+        }
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://worktracksmb.com" class="logo">Work<span>Track</span></a>
+  <a href="https://app.worktracksmb.com/landing#pricing" class="cta-nav">See Pricing</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">Honest Comparison</div>
+  <h1>WorkTrack vs <span>QuickBooks Time</span><br>(Formerly TSheets)</h1>
+  <p>If you're paying per user for time tracking, you're leaving money on the table. Here's the full picture.</p>
+  <div class="verdict">
+    <span>⚖️</span>
+    <span>For a 20-person team, QuickBooks Time costs <strong>$15,343 more</strong> over 3 years than WorkTrack.</span>
+  </div>
+</div>
+
+<!-- COST SECTION -->
+<section>
+  <div class="container">
+    <h2>The Real Cost Over 3 Years</h2>
+    <p class="section-sub">20 employees. No hidden fees. No "per seat" surprises.</p>
+
+    <div class="cost-callout">
+      <div class="cost-card winner">
+        <div class="brand">WorkTrack</div>
+        <div class="price">$497</div>
+        <div class="price-note">one-time — Starter plan</div>
+        <div class="yearly">3-year total: <strong>$497</strong><br>No monthly. No per-seat.</div>
+      </div>
+      <div class="cost-card">
+        <div class="brand">QuickBooks Time (TSheets)</div>
+        <div class="price">$440+</div>
+        <div class="price-note">per month for 20 users</div>
+        <div class="yearly">3-year total: <strong>$15,840</strong><br>$20 base + $10/user/mo</div>
+      </div>
+    </div>
+
+    <div class="savings-banner">
+      <p>WorkTrack saves a 20-person team</p>
+      <div class="number">$15,343</div>
+      <small>over 3 years — enough to hire a part-time employee</small>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE COMPARISON -->
+<section>
+  <div class="container">
+    <h2>Feature-by-Feature Comparison</h2>
+    <p class="section-sub">Everything you need to make the right call.</p>
+
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="highlight">WorkTrack</th>
+          <th>QuickBooks Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pricing model</td>
+          <td class="worktrack">Flat-rate one-time</td>
+          <td class="tsheets">Per user/month</td>
+        </tr>
+        <tr>
+          <td>Requires other subscription</td>
+          <td class="worktrack"><span class="check">✓</span> None required</td>
+          <td class="tsheets"><span class="cross">✗</span> Works best with QuickBooks Online ($30–$200/mo)</td>
+        </tr>
+        <tr>
+          <td>GPS clock-in/out</td>
+          <td class="worktrack"><span class="check">✓</span> Included</td>
+          <td class="tsheets"><span class="check">✓</span> Included</td>
+        </tr>
+        <tr>
+          <td>Geofencing</td>
+          <td class="worktrack"><span class="check">✓</span> Included</td>
+          <td class="tsheets"><span class="check">✓</span> Included</td>
+        </tr>
+        <tr>
+          <td>Overtime alerts</td>
+          <td class="worktrack"><span class="check">✓</span> Included</td>
+          <td class="tsheets"><span class="check">✓</span> Included</td>
+        </tr>
+        <tr>
+          <td>Job costing</td>
+          <td class="worktrack"><span class="check">✓</span> Included</td>
+          <td class="tsheets"><span class="partial">~</span> Add-on / higher plan</td>
+        </tr>
+        <tr>
+          <td>AI-assisted scheduling</td>
+          <td class="worktrack"><span class="check">✓</span> WorkTrack AI ($29/mo)</td>
+          <td class="tsheets"><span class="cross">✗</span> Not available</td>
+        </tr>
+        <tr>
+          <td>Shift scheduling</td>
+          <td class="worktrack"><span class="check">✓</span> Included</td>
+          <td class="tsheets"><span class="check">✓</span> Included</td>
+        </tr>
+        <tr>
+          <td>Manager approval workflow</td>
+          <td class="worktrack"><span class="check">✓</span> Included</td>
+          <td class="tsheets"><span class="check">✓</span> Included</td>
+        </tr>
+        <tr>
+          <td>Payroll export</td>
+          <td class="worktrack"><span class="check">✓</span> CSV + integrations</td>
+          <td class="tsheets"><span class="check">✓</span> Deep QuickBooks sync</td>
+        </tr>
+        <tr>
+          <td>Mobile app reliability</td>
+          <td class="worktrack"><span class="check">✓</span> Stable</td>
+          <td class="tsheets"><span class="cross">✗</span> Known freezes/crashes post-Intuit acquisition</td>
+        </tr>
+        <tr>
+          <td>Customer support</td>
+          <td class="worktrack"><span class="check">✓</span> Direct access</td>
+          <td class="tsheets"><span class="cross">✗</span> "Hours on the phone" per user reviews</td>
+        </tr>
+        <tr>
+          <td>Cost scales with headcount</td>
+          <td class="worktrack"><span class="check">✓</span> No — flat rate</td>
+          <td class="tsheets"><span class="cross">✗</span> Yes — every hire costs more</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- TSHEETS PAIN POINTS -->
+<section style="background: var(--white);">
+  <div class="container">
+    <h2>Why People Leave QuickBooks Time</h2>
+    <p class="section-sub">Pulled from real user reviews on G2 and Capterra.</p>
+
+    <div class="pain-list">
+      <div class="pain-item">
+        <div class="icon">💸</div>
+        <div>
+          <h4>Pricing that punishes growth</h4>
+          <p>Every time you hire, your bill goes up. At $10/user/month, adding 5 employees adds $600/year — forever. Most SMBs realize this is backward when they're trying to scale.</p>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="icon">🔗</div>
+        <div>
+          <h4>Hidden dependency on QuickBooks Online</h4>
+          <p>TSheets was sold as standalone but works best (and is often sold) with QuickBooks Online — another $30–$200/month subscription on top of the per-user fee. Many users don't realize this until after signup.</p>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="icon">📱</div>
+        <div>
+          <h4>Mobile app quality dropped after Intuit acquisition</h4>
+          <p>Since Intuit acquired TSheets and rebranded it, user reviews consistently flag freezing, crashes, and GPS tracking errors on the mobile app. Field-first businesses are hit hardest.</p>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="icon">📞</div>
+        <div>
+          <h4>Support that feels like a big company</h4>
+          <p>Multiple Capterra and G2 reviews describe spending hours on hold or waiting days for responses. When payroll depends on your time tracking, that's not acceptable for a small business.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="container">
+    <h2>What WorkTrack Customers Say</h2>
+    <p class="section-sub">From SMB owners who made the switch.</p>
+
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"We were paying over $300/month for TSheets for our crew. Switched to WorkTrack and the one-time price paid for itself in the first 2 months. GPS tracking works better too."</blockquote>
+        <div class="author">— Landscaping company, 14 employees, Texas</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The TSheets mobile app kept freezing on my guys in the field. WorkTrack just works. Clock-in, clock-out, done. Payroll takes me half the time it used to."</blockquote>
+        <div class="author">— Auto repair shop, 9 employees, DFW</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I didn't realize I was paying for QuickBooks AND TSheets every month. WorkTrack let me cut one subscription entirely. Flat rate is the only model that makes sense for a small shop."</blockquote>
+        <div class="author">— Cleaning service, 18 employees, Dallas</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Job costing used to be a separate spreadsheet. Now it's built in. I can actually see which jobs are profitable and which aren't — that alone is worth the price."</blockquote>
+        <div class="author">— General contractor, 22 employees, Fort Worth</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ (schema-targeted) -->
+<section style="background: var(--white);">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <p class="section-sub">The questions we get most from businesses comparing options.</p>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>Is WorkTrack cheaper than QuickBooks Time (TSheets)?</h4>
+        <p>Yes — significantly. WorkTrack uses flat-rate pricing starting at $497 one-time. QuickBooks Time charges $20/month base plus $10/user/month. For a 20-person team that's $440/month or $5,280/year. Over 3 years, WorkTrack saves over $15,000 on that same team size.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do I need a QuickBooks subscription to use QuickBooks Time?</h4>
+        <p>QuickBooks Time technically works standalone, but it's built to sync with QuickBooks Online — which costs $30–$200/month extra. WorkTrack has no external subscription dependency.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Does WorkTrack have GPS time tracking like TSheets?</h4>
+        <p>Yes. WorkTrack includes GPS clock-in/out, geofencing, and real-time location for field employees — all in the flat-rate price. No per-user upsell for GPS features.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can WorkTrack handle job costing?</h4>
+        <p>Yes. WorkTrack lets you assign time entries to specific jobs or projects so you can see labor costs per client or job site — useful for contractors, landscapers, and service businesses that bill by project.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What if I'm already using QuickBooks for payroll?</h4>
+        <p>WorkTrack exports payroll data in CSV format compatible with QuickBooks and other payroll tools. You can keep using QuickBooks for accounting — you just don't need QuickBooks Time (or its monthly fee) for time tracking.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What are the main reasons businesses switch from TSheets to WorkTrack?</h4>
+        <p>The top reasons: (1) per-user pricing that grows every time you hire, (2) needing a QuickBooks Online subscription, (3) mobile app instability after the Intuit acquisition, and (4) slow support response times when payroll depends on accuracy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERDICT / CTA -->
+<section>
+  <div class="container">
+    <div class="verdict-box">
+      <h2>The Verdict</h2>
+      <p>If you're running a service business with hourly employees and you want GPS tracking, job costing, and overtime alerts — without paying per user every single month — WorkTrack is the smarter choice for most SMBs.</p>
+      <a href="https://app.worktracksmb.com/landing#pricing" class="btn-primary">See WorkTrack Pricing</a>
+      <a href="https://worktracksmb.com" class="sub-link">Learn more at worktracksmb.com →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 WorkTrack by ITSMB. All rights reserved. &nbsp;|&nbsp; <a href="https://worktracksmb.com">worktracksmb.com</a></p>
+  <p style="margin-top:8px;">QuickBooks and TSheets are trademarks of Intuit Inc. This page is not affiliated with or endorsed by Intuit.</p>
+</footer>
+
+</body>
+</html>

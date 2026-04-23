@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorkTrack vs Homebase — Honest Comparison for Small Businesses</title>
+<meta name="description" content="Compare WorkTrack vs Homebase for small business time tracking. See real pricing, GPS features, offline mode, and why SMBs are switching to WorkTrack's flat-rate model.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0c0f1a;
+    --navy-90:    #1a1d2e;
+    --navy-80:    #282b3d;
+    --navy-60:    #4d5068;
+    --navy-40:    #7a7d93;
+    --navy-20:    #b8bac7;
+    --navy-10:    #dcdde4;
+    --navy-05:    #eeeff3;
+    --white:      #ffffff;
+    --off-white:  #f8f7f4;
+    --amber:      #f5a623;
+    --amber-dark: #d4880c;
+    --amber-light:#fcd581;
+    --amber-pale: #fef3dc;
+    --success:    #2ecc71;
+    --error:      #e74c3c;
+    --font-display: 'Syne', 'Arial Black', sans-serif;
+    --font-body:    'DM Sans', 'Helvetica Neue', sans-serif;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--off-white);
+    color: var(--navy);
+    line-height: 1.6;
+  }
+
+  nav {
+    background: var(--navy);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--white);
+    text-decoration: none;
+  }
+  nav .logo span { color: var(--amber); }
+  nav a.cta-nav {
+    background: var(--amber);
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+  }
+  nav a.cta-nav:hover { background: var(--amber-dark); }
+
+  .hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 80px 32px 64px;
+    text-align: center;
+  }
+  .hero .badge {
+    display: inline-block;
+    background: var(--amber-pale);
+    color: var(--amber-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
+    border-radius: 99px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+  .hero h1 span { color: var(--amber); }
+  .hero p {
+    font-size: 1.125rem;
+    color: var(--navy-20);
+    max-width: 600px;
+    margin: 0 auto 36px;
+  }
+  .hero .verdict {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(245,166,35,0.12);
+    border: 1px solid rgba(245,166,35,0.3);
+    border-radius: var(--radius-md);
+    padding: 14px 24px;
+    font-size: 0.95rem;
+    color: var(--amber-light);
+  }
+  .hero .verdict strong { color: var(--amber); }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  section { padding: 64px 0; }
+  section + section { border-top: 1px solid var(--navy-10); }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .section-sub {
+    color: var(--navy-60);
+    font-size: 1.05rem;
+    margin-bottom: 40px;
+  }
+
+  .cost-callout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 600px) { .cost-callout { grid-template-columns: 1fr; } }
+
+  .cost-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    border: 2px solid var(--navy-10);
+    text-align: center;
+  }
+  .cost-card.winner {
+    border-color: var(--amber);
+    background: var(--amber-pale);
+  }
+  .cost-card .brand {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--navy-40);
+    margin-bottom: 8px;
+  }
+  .cost-card.winner .brand { color: var(--amber-dark); }
+  .cost-card .price {
+    font-family: var(--font-display);
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .cost-card.winner .price { color: var(--amber-dark); }
+  .cost-card .price-note {
+    font-size: 0.85rem;
+    color: var(--navy-60);
+    margin-bottom: 16px;
+  }
+  .cost-card .yearly {
+    font-size: 0.9rem;
+    color: var(--navy-60);
+    padding-top: 16px;
+    border-top: 1px solid var(--navy-10);
+  }
+  .cost-card.winner .yearly { border-color: rgba(213,136,12,0.2); }
+
+  .savings-banner {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .savings-banner p { font-size: 1rem; color: var(--navy-20); margin-bottom: 4px; }
+  .savings-banner .number {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--amber);
+  }
+  .savings-banner small { font-size: 0.85rem; color: var(--navy-40); }
+
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    background: var(--white);
+  }
+  .comp-table thead tr { background: var(--navy); color: var(--white); }
+  .comp-table thead th {
+    padding: 16px 20px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+  .comp-table thead th:first-child { width: 40%; }
+  .comp-table thead th.highlight { color: var(--amber); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--navy-05); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:hover { background: var(--navy-05); }
+  .comp-table td {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    vertical-align: middle;
+  }
+  .comp-table td:first-child { color: var(--navy-60); font-weight: 500; }
+  .comp-table td.worktrack { font-weight: 600; color: var(--navy); }
+  .comp-table td.homebase { color: var(--navy-40); }
+
+  .check { color: var(--success); font-size: 1.1rem; }
+  .cross { color: var(--error); font-size: 1.1rem; }
+  .partial { color: var(--amber-dark); font-size: 1.1rem; }
+
+  .pain-list { display: grid; gap: 16px; }
+  .pain-item {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    border-left: 4px solid var(--error);
+  }
+  .pain-item .icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+  .pain-item h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .pain-item p { font-size: 0.9rem; color: var(--navy-60); }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 600px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
+  .testimonial {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    border: 1px solid var(--navy-10);
+  }
+  .testimonial .stars { color: var(--amber); font-size: 1rem; margin-bottom: 12px; }
+  .testimonial blockquote {
+    font-size: 0.95rem;
+    color: var(--navy);
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+  .testimonial .author { font-size: 0.85rem; font-weight: 600; color: var(--navy-60); }
+
+  .faq-list { display: grid; gap: 16px; }
+  .faq-item {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    border: 1px solid var(--navy-10);
+  }
+  .faq-item h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--navy);
+  }
+  .faq-item p { font-size: 0.9rem; color: var(--navy-60); line-height: 1.6; }
+
+  .verdict-box {
+    background: var(--navy);
+    border-radius: var(--radius-lg);
+    padding: 48px 40px;
+    text-align: center;
+    color: var(--white);
+  }
+  .verdict-box h2 { color: var(--white); margin-bottom: 12px; }
+  .verdict-box p { color: var(--navy-20); max-width: 560px; margin: 0 auto 32px; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--amber);
+    color: var(--navy);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 16px 36px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+  }
+  .btn-primary:hover { background: var(--amber-dark); }
+  .verdict-box .sub-link {
+    display: block;
+    margin-top: 16px;
+    font-size: 0.875rem;
+    color: var(--navy-40);
+    text-decoration: none;
+  }
+  .verdict-box .sub-link:hover { color: var(--navy-20); }
+
+  .also-compare {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 24px 28px;
+    border: 1px solid var(--navy-10);
+    margin-top: 32px;
+    text-align: center;
+  }
+  .also-compare p { font-size: 0.9rem; color: var(--navy-60); margin-bottom: 12px; }
+  .also-compare a {
+    display: inline-block;
+    background: var(--navy-05);
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 8px 18px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    border: 1px solid var(--navy-10);
+  }
+  .also-compare a:hover { background: var(--navy-10); }
+
+  footer {
+    background: var(--navy-90);
+    color: var(--navy-40);
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--navy-20); text-decoration: none; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "WorkTrack vs Homebase Comparison",
+  "description": "Detailed comparison of WorkTrack and Homebase for small business time tracking. Covers pricing, GPS tracking, offline mode, shift scheduling, and support.",
+  "url": "https://worktracksmb.com/worktrack-vs-homebase",
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Homebase really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Homebase has a free tier but it is severely limited — only one location, basic clock-in/out, and no real GPS tracking. Most small businesses that need GPS verification, job costing, or overtime management end up on a paid plan at $20–$80/month per location. WorkTrack offers all core features in a flat one-time price starting at $497."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Homebase have GPS time tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Homebase records the location at clock-in but does not offer continuous GPS tracking or geofencing enforcement. WorkTrack includes full GPS clock-in/out and geofencing to prevent buddy punching and off-site clock-ins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Homebase work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Homebase's offline mode is known to serve error messages without an internet connection. This is a critical gap for field workers, construction crews, and anyone working in areas with poor cell coverage. WorkTrack is designed to work in offline conditions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the main reasons businesses switch from Homebase to WorkTrack?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The top reasons are: (1) Homebase's free tier lacks real GPS and job costing; (2) paid plans charge per location which adds up for multi-site businesses; (3) offline mode doesn't work reliably; (4) no task scheduling or job costing on lower plans; and (5) WorkTrack's flat-rate model is more predictable for growing teams."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does WorkTrack pricing compare to Homebase?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Homebase charges $20–$80/month per location depending on the plan. For a single location with 20 employees, that's $240–$960/year — every year. WorkTrack charges a one-time flat rate starting at $497, with no recurring per-location or per-user fees."
+        }
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="https://worktracksmb.com" class="logo">Work<span>Track</span></a>
+  <a href="https://app.worktracksmb.com/landing#pricing" class="cta-nav">See Pricing</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">Honest Comparison</div>
+  <h1>WorkTrack vs <span>Homebase</span></h1>
+  <p>Homebase's free plan looks great until you need GPS tracking, offline mode, or job costing. Here's the real story.</p>
+  <div class="verdict">
+    <span>⚖️</span>
+    <span>Homebase's paid plans cost <strong>$240–$960/year</strong> per location — every year. WorkTrack is a one-time fee.</span>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>The Real Cost Over 3 Years</h2>
+    <p class="section-sub">Single location, 20 employees. What you actually pay.</p>
+
+    <div class="cost-callout">
+      <div class="cost-card winner">
+        <div class="brand">WorkTrack</div>
+        <div class="price">$497</div>
+        <div class="price-note">one-time — Starter plan</div>
+        <div class="yearly">3-year total: <strong>$497</strong><br>No monthly. No per-location fees.</div>
+      </div>
+      <div class="cost-card">
+        <div class="brand">Homebase (Essentials)</div>
+        <div class="price">$20+</div>
+        <div class="price-note">per month per location</div>
+        <div class="yearly">3-year total: <strong>$720–$2,880</strong><br>$20–$80/mo depending on plan</div>
+      </div>
+    </div>
+
+    <div class="savings-banner">
+      <p>WorkTrack saves a single-location business up to</p>
+      <div class="number">$2,383</div>
+      <small>over 3 years vs Homebase Essentials — more on higher plans</small>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Feature-by-Feature Comparison</h2>
+    <p class="section-sub">What you actually get at each tier.</p>
+
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="highlight">WorkTrack</th>
+          <th>Homebase</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pricing model</td>
+          <td class="worktrack">Flat-rate one-time</td>
+          <td class="homebase">Per location/month ($20–$80)</td>
+        </tr>
+        <tr>
+          <td>Free tier available</td>
+          <td class="worktrack"><span class="cross">✗</span> Paid (one-time)</td>
+          <td class="homebase"><span class="partial">~</span> Yes — 1 location, limited features</td>
+        </tr>
+        <tr>
+          <td>GPS clock-in/out</td>
+          <td class="worktrack"><span class="check">✓</span> Full GPS + geofencing</td>
+          <td class="homebase"><span class="partial">~</span> Location stamp only — no geofencing enforcement</td>
+        </tr>
+        <tr>
+          <td>Offline mode</td>
+          <td class="worktrack"><span class="check">✓</span> Works without internet</td>
+          <td class="homebase"><span class="cross">✗</span> Known to fail — serves errors without connection</td>
+        </tr>
+        <tr>
+          <td>Job / project costing</td>
+          <td class="worktrack"><span class="check">✓</span> Included</td>
+          <td class="homebase"><span class="cross">✗</span> Not available</td>
+        </tr>
+        <tr>
+          <td>Task scheduling</td>
+          <td class="worktrack"><span class="check">✓</span> Included</td>
+          <td class="homebase"><span class="cross">✗</span> Shift scheduling only — no task assignment</td>
+        </tr>
+        <tr>
+          <td>AI-assisted scheduling</td>
+          <td class="worktrack"><span class="check">✓</span> WorkTrack AI ($29/mo)</td>
+          <td class="homebase"><span class="cross">✗</span> Not available</td>
+        </tr>
+        <tr>
+          <td>Overtime alerts</td>
+          <td class="worktrack"><span class="check">✓</span> Included</td>
+          <td class="homebase"><span class="partial">~</span> Higher plans only</td>
+        </tr>
+        <tr>
+          <td>Shift scheduling</td>
+          <td class="worktrack"><span class="check">✓</span> Included</td>
+          <td class="homebase"><span class="check">✓</span> Included (Homebase strength)</td>
+        </tr>
+        <tr>
+          <td>Calendar sync</td>
+          <td class="worktrack"><span class="check">✓</span> Included</td>
+          <td class="homebase"><span class="cross">✗</span> Not available</td>
+        </tr>
+        <tr>
+          <td>Payroll export</td>
+          <td class="worktrack"><span class="check">✓</span> CSV + integrations</td>
+          <td class="homebase"><span class="check">✓</span> Included (paid plans)</td>
+        </tr>
+        <tr>
+          <td>Multi-location support</td>
+          <td class="worktrack"><span class="check">✓</span> Included in flat rate</td>
+          <td class="homebase"><span class="cross">✗</span> Charged per location — costs multiply</td>
+        </tr>
+        <tr>
+          <td>Cost scales with growth</td>
+          <td class="worktrack"><span class="check">✓</span> No — flat rate forever</td>
+          <td class="homebase"><span class="cross">✗</span> Yes — each location adds monthly cost</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section style="background: var(--white);">
+  <div class="container">
+    <h2>Where Homebase Falls Short</h2>
+    <p class="section-sub">The gaps that matter most for field-based and multi-location businesses.</p>
+
+    <div class="pain-list">
+      <div class="pain-item">
+        <div class="icon">📡</div>
+        <div>
+          <h4>GPS that doesn't actually verify location</h4>
+          <p>Homebase records where an employee was when they clocked in but doesn't enforce geofencing. Employees can clock in from a parking lot, a coffee shop, or home — and the system won't stop them. WorkTrack's geofencing blocks clock-ins outside the designated zone.</p>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="icon">📵</div>
+        <div>
+          <h4>Offline mode that doesn't work</h4>
+          <p>Homebase advertises offline functionality but user reviews consistently report error messages when there's no internet connection. For construction crews, landscapers, and anyone working in dead zones, this is a dealbreaker. WorkTrack handles offline clock-ins and syncs when connectivity returns.</p>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="icon">📍</div>
+        <div>
+          <h4>Per-location pricing punishes multi-site businesses</h4>
+          <p>Homebase charges per location, not per company. If you run 3 locations, you pay 3x. For a business expanding from 1 to 3 locations, your Homebase bill triples overnight. WorkTrack's flat rate covers your whole operation — no matter how many sites you add.</p>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="icon">🔨</div>
+        <div>
+          <h4>No job costing or task tracking</h4>
+          <p>Homebase is built for retail and restaurant shift scheduling. It doesn't support assigning time to specific jobs or projects — a must-have for contractors, cleaners, landscapers, and service businesses that bill by job. WorkTrack includes job costing at every plan level.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>When Homebase Is the Right Choice</h2>
+    <p class="section-sub">We'll be straight with you.</p>
+
+    <div class="faq-item" style="background:var(--white);border-radius:var(--radius-md);padding:28px;border:1px solid var(--navy-10);margin-bottom:0;">
+      <p style="font-size:0.95rem;color:var(--navy-60);line-height:1.7;">
+        Homebase is genuinely good at <strong>shift scheduling for fixed-location businesses</strong> — restaurants, retail shops, salons. If you have one location, predictable shifts, and no need for GPS verification or job costing, Homebase's free tier may be enough.<br><br>
+        WorkTrack is the better fit if you have <strong>field employees, multiple locations, job-based billing, or you're tired of paying monthly fees that grow with your headcount</strong>. The flat-rate model means the price you pay today is the price you pay in year three.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>What WorkTrack Customers Say</h2>
+    <p class="section-sub">From owners who outgrew Homebase.</p>
+
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Homebase was fine when we had one location. The second we opened a second shop, our bill doubled. Switched to WorkTrack and paid once. Done."</blockquote>
+        <div class="author">— Salon owner, 2 locations, Dallas</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"My guys work in neighborhoods with spotty signal. Homebase would just error out. WorkTrack works offline and syncs when they get back to the truck. Night and day difference."</blockquote>
+        <div class="author">— Landscaping company, 11 employees, Fort Worth</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I needed job costing — which job is costing me the most in labor. Homebase doesn't do that. WorkTrack does, and it's the main reason I switched."</blockquote>
+        <div class="author">— General contractor, 16 employees, Ennis TX</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The GPS on Homebase was basically useless — it just showed where they clocked in, not whether they were actually on site. WorkTrack's geofencing solved our buddy punching problem immediately."</blockquote>
+        <div class="author">— Cleaning service, 22 employees, DFW</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--white);">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <p class="section-sub">Common questions when comparing Homebase and WorkTrack.</p>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>Is Homebase really free?</h4>
+        <p>Homebase has a free tier for one location with basic clock-in/out. But it lacks GPS enforcement, offline mode, job costing, and overtime alerts. Most businesses that need those features end up on a paid plan at $20–$80/month. WorkTrack starts at $497 one-time with all core features included.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Does Homebase have GPS time tracking?</h4>
+        <p>Homebase records location at clock-in but does not enforce geofencing — employees can clock in from anywhere. WorkTrack includes full GPS geofencing that blocks clock-ins outside a defined job site radius, preventing buddy punching and off-site punches.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Does Homebase work offline?</h4>
+        <p>Not reliably. Multiple user reviews report that Homebase's offline mode fails and serves error messages when there's no internet connection. WorkTrack is built to handle offline clock-ins and syncs automatically when the device reconnects — critical for field workers.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How does WorkTrack pricing compare to Homebase for multiple locations?</h4>
+        <p>Homebase charges per location. Two locations = 2x the monthly fee. Three locations = 3x. WorkTrack charges a flat one-time rate that covers your entire operation regardless of how many locations you have.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What are the main reasons businesses switch from Homebase to WorkTrack?</h4>
+        <p>The most common reasons: (1) GPS that doesn't actually enforce geofencing, (2) offline mode that fails in the field, (3) no job costing or task scheduling, (4) per-location pricing that multiplies as you grow, and (5) wanting a flat rate with no ongoing monthly fees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="verdict-box">
+      <h2>The Verdict</h2>
+      <p>If your team works in the field, across multiple locations, or you need job costing — WorkTrack is built for you. One price, all features, no monthly surprises.</p>
+      <a href="https://app.worktracksmb.com/landing#pricing" class="btn-primary">See WorkTrack Pricing</a>
+      <a href="https://worktracksmb.com" class="sub-link">Learn more at worktracksmb.com →</a>
+    </div>
+
+    <div class="also-compare">
+      <p>Also comparing other tools?</p>
+      <a href="/worktrack-vs-tsheets">WorkTrack vs QuickBooks Time (TSheets) →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 WorkTrack by ITSMB. All rights reserved. &nbsp;|&nbsp; <a href="https://worktracksmb.com">worktracksmb.com</a></p>
+  <p style="margin-top:8px;">Homebase is a trademark of Homebase, Inc. This page is not affiliated with or endorsed by Homebase.</p>
+</footer>
+
+</body>
+</html>
