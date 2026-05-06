@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Restaurant Wi-Fi That Doesn't Crash During the Dinner Rush</title>
+<meta name="description" content="Why your restaurant Wi-Fi dies at 7pm Saturday and how to fix it. Network spec, segmentation, payment failover, and the cheap fixes that actually work." />
+<meta property="og:title" content="Restaurant Wi-Fi That Doesn't Crash During the Dinner Rush" />
+<meta property="og:description" content="Why your Wi-Fi dies at 7pm Saturday and how to actually fix it." />
+<meta property="og:url" content="https://itforbusinesssmb.com/resources/restaurant-wifi-guide" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://itforbusinesssmb.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="IT for Small Businesses" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Restaurant Wi-Fi That Doesn't Crash During the Dinner Rush" />
+<meta name="twitter:description" content="Why your Wi-Fi dies at 7pm Saturday and how to fix it." />
+<meta name="twitter:image" content="https://itforbusinesssmb.com/og-image.png" />
+<link rel="canonical" href="https://itforbusinesssmb.com/resources/restaurant-wifi-guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://itforbusinesssmb.com/"},
+  {"@type":"ListItem","position":2,"name":"Resources","item":"https://itforbusinesssmb.com/resources"},
+  {"@type":"ListItem","position":3,"name":"Restaurant Wi-Fi guide","item":"https://itforbusinesssmb.com/resources/restaurant-wifi-guide"}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article",
+ "headline":"Restaurant Wi-Fi that doesn't crash during the dinner rush",
+ "description":"Why restaurant Wi-Fi fails during peak hours and how to architect a network that holds up.",
+ "author":{"@type":"Organization","name":"IT for Small Businesses","url":"https://itforbusinesssmb.com/"},
+ "publisher":{"@id":"https://itforbusinesssmb.com/#business"},
+ "datePublished":"2026-05-05",
+ "dateModified":"2026-05-05",
+ "mainEntityOfPage":"https://itforbusinesssmb.com/resources/restaurant-wifi-guide",
+ "image":"https://itforbusinesssmb.com/og-image.png"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F3ECDE;--ink:#1E1E26;--ink-2:#2A2A34;--paper:#FBF7EE;--rust:#C9532A;--muted:#6A6458;--line:#D6CBB1}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--cream);color:var(--ink);font-family:'Geist',system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.mono{font-family:'Geist Mono',ui-monospace,monospace;font-size:0.78em;font-weight:500;letter-spacing:0.02em;text-transform:uppercase}
+.wrap{max-width:780px;margin:0 auto;padding:0 40px}
+.wrap-wide{max-width:1180px;margin:0 auto;padding:0 40px}
+nav.top{display:flex;align-items:center;justify-content:space-between;padding:26px 40px;max-width:1180px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:12px;font-weight:500;font-size:15px;text-decoration:none}
+.logo-mark{width:44px;height:44px;background:var(--ink);color:var(--paper);display:inline-flex;align-items:center;justify-content:center;font-family:'Geist Mono',monospace;font-size:9px;font-weight:600;letter-spacing:0.1em;border-radius:50%}
+nav.top ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;font-size:15px;color:var(--ink-2)}
+nav.top ul a{text-decoration:none}
+nav.top ul a:hover{color:var(--rust)}
+.nav-cta{background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:999px;text-decoration:none;font-size:14px}
+.nav-cta:hover{background:var(--rust)}
+.crumb{padding:20px 0;color:var(--muted);font-size:13px}
+.crumb a{text-decoration:none;color:var(--muted)}
+.crumb a:hover{color:var(--rust)}
+.article-head{padding:30px 0 40px}
+.article-meta{font-family:'Geist Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px}
+.article-head h1{font-family:'Instrument Serif','Times New Roman',serif;font-weight:400;font-size:clamp(40px,5vw,64px);line-height:1.05;margin:0;letter-spacing:-0.02em}
+.article-head h1 em{font-style:italic;color:var(--rust)}
+article{padding:20px 0 60px;font-size:18px;line-height:1.7;color:var(--ink-2)}
+article p{margin:0 0 22px}
+article h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1.15;margin:42px 0 16px;letter-spacing:-0.01em;color:var(--ink)}
+article h2 em{font-style:italic;color:var(--rust)}
+article h3{font-family:'Instrument Serif',serif;font-weight:400;font-size:22px;line-height:1.2;margin:30px 0 10px;color:var(--ink)}
+article ul{margin:0 0 22px;padding-left:20px}
+article li{margin:0 0 10px}
+article strong{color:var(--ink);font-weight:500}
+article em{color:var(--rust);font-style:italic}
+.callout{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--rust);border-radius:6px;padding:20px 24px;margin:30px 0;font-size:16px}
+.callout p{margin:0}
+.cta-row{padding:50px 0 90px;text-align:center;border-top:1px solid var(--line)}
+.cta-row h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:0 0 24px;letter-spacing:-0.02em}
+.cta-row h2 em{font-style:italic;color:var(--rust)}
+.btn{padding:14px 22px;border-radius:999px;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;border:1px solid transparent}
+.btn-primary{background:var(--rust);color:var(--paper)}
+.btn-primary:hover{background:#b24420}
+.related{padding:30px 0 60px;border-top:1px solid var(--line)}
+.related .lbl{font-family:'Geist Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;display:block;margin-bottom:14px}
+.related a{display:block;text-decoration:none;color:var(--ink);font-family:'Instrument Serif',serif;font-size:20px;line-height:1.3;margin-bottom:10px;letter-spacing:-0.01em}
+.related a:hover{color:var(--rust)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}
+footer .wrap-wide{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+footer a{color:var(--muted);text-decoration:none;margin-right:18px}
+footer a:hover{color:var(--rust)}
+@media(max-width:720px){nav.top ul{display:none}}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a class="logo" href="/"><span class="logo-mark">IT</span><span>IT for Small Businesses</span></a>
+  <ul>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/pricing">Pricing</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/resources">Resources</a></li>
+  </ul>
+  <a class="nav-cta" href="/#contact">Get a quote →</a>
+</nav>
+
+<div class="wrap crumb"><a href="/">Home</a> / <a href="/resources">Resources</a> / Restaurant Wi-Fi guide</div>
+
+<header class="article-head wrap">
+  <div class="article-meta">Restaurants · 7 min read · Updated May 2026</div>
+  <h1>Restaurant Wi-Fi <em>that doesn't crash</em> during the dinner rush.</h1>
+</header>
+
+<article class="wrap">
+  <p>If your Wi-Fi dies right when you need it most — 7pm Saturday, payment terminals throwing errors, the kitchen display freezing, the manager's iPad spinning — it's almost never a "the internet is bad" problem. It's a network design problem, and it's usually fixable for less money than you think.</p>
+
+  <p>Here's what's actually happening, and what to do about it.</p>
+
+  <h2>Why dinner-rush Wi-Fi falls over</h2>
+
+  <p>A typical restaurant network has three completely different jobs running on the same Wi-Fi:</p>
+
+  <ul>
+    <li><strong>Mission-critical:</strong> POS terminals, payment processors, kitchen display systems, online-order tablets</li>
+    <li><strong>Operational:</strong> Manager iPads, scheduling apps, security cameras, music streaming</li>
+    <li><strong>Guest:</strong> Customer phones, the occasional laptop, and during dinner rush, sometimes 60+ devices that connect, fail, retry, fail, retry</li>
+  </ul>
+
+  <p>If all three groups are sharing the same network and the same access point, what kills you isn't bandwidth — it's <strong>airtime contention</strong>. Wi-Fi is a polite protocol; one device transmits at a time. When you have 60 phones all trying to associate, the POS waits its turn behind them. By the time it gets a slot, the payment processor has timed out.</p>
+
+  <h2>The fix: <em>three networks</em>, one router.</h2>
+
+  <p>The fix is to split traffic onto three separate Wi-Fi networks (technically three "SSIDs" on different VLANs) so guest device chaos can't drown out your POS. Most consumer routers can't do this. Most prosumer-grade gear can. We typically deploy:</p>
+
+  <h3>Network 1 — POS / payment</h3>
+  <p>Wired where possible. Wireless only for tablets and handheld order-takers. Locked down — only known devices, fixed IP addresses, no guest access. Prioritized in the QoS settings so payment traffic gets airtime first.</p>
+
+  <h3>Network 2 — Staff / operations</h3>
+  <p>For manager iPads, scheduling apps, kitchen displays. Separated from POS so a compromised iPad doesn't pivot to the payment terminal. Different SSID name and password from guest.</p>
+
+  <h3>Network 3 — Guest</h3>
+  <p>Captive portal optional. Bandwidth-capped per device. Isolated — devices can't see each other or the internal networks. The guest network can be on fire and your POS won't notice.</p>
+
+  <h2>Hardware that actually holds up</h2>
+
+  <p>For most small restaurants we deploy <strong>Ubiquiti UniFi</strong> or <strong>TP-Link Omada</strong> gear — both are roughly $150–$300 per access point, support multiple SSIDs and VLANs, and don't require a yearly subscription. Avoid:</p>
+
+  <ul>
+    <li>Consumer Wi-Fi 6 routers from big-box stores. They're great for a 4-bedroom house, terrible for 60+ simultaneous devices.</li>
+    <li>The mesh system your ISP is leasing you for $15/month. It's prioritized for streaming Netflix in a living room, not running a POS during a Saturday rush.</li>
+    <li>"Just add another extender." Extenders make airtime contention worse, not better.</li>
+  </ul>
+
+  <h2>Payment terminal failover</h2>
+
+  <p>Even the best network has a bad day. The single highest-impact protection is configuring your payment terminals (Square, Toast, Clover, Stripe) to failover to <strong>cellular data</strong> when Wi-Fi fails. Most modern terminals support this; many restaurants just never enabled it. Cost is usually a few dollars a month. Saves you from a 90-minute outage during the dinner rush.</p>
+
+  <div class="callout">
+    <p><strong>Quick win:</strong> if you do <em>nothing</em> else this month, log into your payment terminal admin panel and turn on cellular failover. Five minutes. Saves at least one rush from disaster per year.</p>
+  </div>
+
+  <h2>The site survey nobody does</h2>
+
+  <p>Most restaurant Wi-Fi problems trace back to access-point placement. The router gets put wherever the cable came in — which is usually in a back office, behind a metal door, next to an ice machine. That's the worst possible spot.</p>
+
+  <p>A proper site survey takes about an hour. Walk the floor with a tool like Ekahai or NetSpot, map out signal strength, identify dead zones, find the spots where two access points are interfering with each other. Most kitchens need a separate ceiling-mount AP from the dining room because the prep wall blocks signal. Most patios need their own outdoor-rated AP.</p>
+
+  <p>Skip this and you're guessing. Do it once and you'll never put another AP in the wrong place.</p>
+
+  <h2>What to ask your IT person (or us)</h2>
+
+  <ul>
+    <li>"Are POS, staff, and guest on separate VLANs?"</li>
+    <li>"Is QoS prioritizing payment traffic?"</li>
+    <li>"Does our payment terminal failover to cellular?"</li>
+    <li>"How many simultaneous devices can each access point handle, and how many do we have on the floor at peak?"</li>
+    <li>"When was the last time someone walked the floor with a Wi-Fi survey tool?"</li>
+  </ul>
+
+  <p>If they don't have answers to those five, you've found the problem.</p>
+</article>
+
+<section class="wrap related">
+  <span class="lbl">Related reading</span>
+  <a href="/resources/smb-cybersecurity-checklist">Small business cybersecurity checklist →</a>
+  <a href="/resources/do-i-need-an-msp">Do I need an MSP? →</a>
+  <a href="/services">All our services →</a>
+</section>
+
+<section class="wrap-wide cta-row">
+  <h2>Want a Wi-Fi setup that <em>survives Saturday</em>?</h2>
+  <a class="btn btn-primary" href="/#contact">Book a 15-min call →</a>
+</section>
+
+<footer>
+  <div class="wrap-wide">
+    <div>© IT for Small Businesses · Ennis, TX · Serving DFW Metro</div>
+    <div><a href="/">Home</a><a href="/services">Services</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/resources">Resources</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
