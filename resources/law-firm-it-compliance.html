@@ -218,6 +218,22 @@ footer a:hover{color:var(--rust)}
   <p>Total monthly cost for a 5-lawyer firm: typically $300–600. Less than one billable hour. Worth a lot more than that the first time something goes wrong.</p>
 </article>
 
+<section class="wrap" style="padding:30px 0 50px;border-top:1px solid var(--line)">
+  <div style="background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--rust);border-radius:6px;padding:28px 32px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center">
+    <div>
+      <span style="font-family:'Geist Mono',monospace;font-size:11px;color:var(--rust);text-transform:uppercase;letter-spacing:0.08em">&rarr; Free download</span>
+      <h3 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15;margin:8px 0 6px;letter-spacing:-0.01em">Get the cybersecurity checklist as a printable PDF.</h3>
+      <p style="margin:0;color:var(--ink-2);font-size:14px">12 essentials, in priority order. Drop your email and we&apos;ll send the link.</p>
+    </div>
+    <form name="cybersecurity-checklist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you-checklist" style="display:flex;flex-direction:column;gap:8px;min-width:280px">
+      <input type="hidden" name="form-name" value="cybersecurity-checklist" />
+      <p style="display:none"><label>Don&apos;t fill if you&apos;re human: <input name="bot-field" /></label></p>
+      <input type="email" name="email" required placeholder="you@yourbusiness.com" style="padding:12px 14px;border:1px solid var(--line);border-radius:6px;font-family:inherit;font-size:14px;background:var(--cream)" />
+      <button type="submit" style="padding:12px 18px;border-radius:999px;background:var(--rust);color:var(--paper);font-size:14px;border:0;cursor:pointer;font-family:inherit;font-weight:500">Send me the PDF &rarr;</button>
+    </form>
+  </div>
+</section>
+
 <section class="wrap related">
   <span class="lbl">Related reading</span>
   <a href="/resources/smb-cybersecurity-checklist">Small business cybersecurity checklist →</a>
