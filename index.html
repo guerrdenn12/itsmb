@@ -1,896 +1,922 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>IT for Small Businesses — Managed IT Services & WorkTrack Setup</title>
-<meta name="description" content="Managed IT services built for small businesses. We set up WorkTrack, manage your tech, and keep your business running. Setup packages from $500. Managed IT from $99/mo." />
-
-<meta property="og:type" content="website" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Managed IT for DFW Small Businesses — No Tickets, No Contracts</title>
+<meta name="description" content="Managed IT for DFW small businesses. Setup, security, networks, devices, and on-call support. No tickets, no contracts. Text Dennis." />
+<meta property="og:title" content="Managed IT for DFW Small Businesses — No Tickets, No Contracts" />
+<meta property="og:description" content="Setup, security, networks, devices, and on-call support for small businesses across Dallas/Ft. Worth. Text Dennis." />
 <meta property="og:url" content="https://itforbusinesssmb.com/" />
-<meta property="og:title" content="IT for Small Businesses — Managed IT for SMBs" />
-<meta property="og:description" content="WorkTrack setup, managed IT, and tech support for restaurants, field services, construction, and retail. No contracts." />
-
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://itforbusinesssmb.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="IT for Small Businesses" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Managed IT for DFW Small Businesses — No Tickets, No Contracts" />
+<meta name="twitter:description" content="Setup, security, networks, devices, and on-call support for small businesses across Dallas/Ft. Worth. Text Dennis." />
+<meta name="twitter:image" content="https://itforbusinesssmb.com/og-image.png" />
 <link rel="canonical" href="https://itforbusinesssmb.com/" />
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&display=swap" rel="stylesheet" />
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://itforbusinesssmb.com/#business",
+      "name": "IT for Small Businesses",
+      "alternateName": "IT for Business SMB",
+      "url": "https://itforbusinesssmb.com/",
+      "telephone": "+1-972-433-9181",
+      "email": "support@worktracksmb.com",
+      "description": "Managed IT for DFW small businesses. Setup, security, networks, devices, email, and on-call support. No tickets, no contracts.",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ennis",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Dallas" },
+        { "@type": "City", "name": "Fort Worth" },
+        { "@type": "City", "name": "Ennis" },
+        { "@type": "City", "name": "Waxahachie" },
+        { "@type": "AdministrativeArea", "name": "Dallas-Fort Worth Metroplex" }
+      ],
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Managed IT Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Setup only",
+            "price": "500",
+            "priceCurrency": "USD",
+            "description": "One-time setup of your tech stack — network, devices, email, security, backups."
+          },
+          {
+            "@type": "Offer",
+            "name": "Setup + monthly support",
+            "price": "199",
+            "priceCurrency": "USD",
+            "description": "Setup plus ongoing monthly support, monitoring, and on-call help."
+          },
+          {
+            "@type": "Offer",
+            "name": "Full managed IT",
+            "price": "499",
+            "priceCurrency": "USD",
+            "description": "Hands-off managed IT with priority response, monthly health checks, and full coverage."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://itforbusinesssmb.com/#website",
+      "url": "https://itforbusinesssmb.com/",
+      "name": "IT for Small Businesses",
+      "publisher": { "@id": "https://itforbusinesssmb.com/#business" },
+      "inLanguage": "en-US"
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  background: #0c0f1a;
-  color: #e8eaf2;
-  font-size: 16px;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-a { text-decoration: none; color: inherit; }
+  :root {
+    --cream: #F3ECDE;
+    --cream-2: #EBE2CF;
+    --cream-3: #E3D8BE;
+    --ink: #1E1E26;
+    --ink-2: #2A2A34;
+    --paper: #FBF7EE;
+    --rust: #C9532A;
+    --rust-soft: #E89472;
+    --muted: #6A6458;
+    --line: #D6CBB1;
+    --ok: #3F6B4A;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Geist', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .serif { font-family: 'Instrument Serif', 'Times New Roman', serif; font-weight: 400; letter-spacing: -0.01em; }
+  .mono { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 0.78em; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-synthesis: none; }
+  .hand { font-family: 'Caveat', cursive; font-weight: 600; color: var(--rust); }
+  a { color: inherit; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+  .rule { height: 1px; background: var(--line); border: 0; margin: 0; }
 
-:root {
-  --ink:    #0c0f1a;
-  --ink2:   #141827;
-  --ink3:   #1e2236;
-  --amber:  #f5a623;
-  --amber2: #e8940f;
-  --cream:  #fdf6ec;
-  --white:  #ffffff;
-  --muted:  #6b7490;
-  --border: rgba(255,255,255,0.07);
-  --green:  #10b981;
-  --blue:   #3b82f6;
-  --r:      16px;
-  --rlg:    24px;
-}
+  /* NAV */
+  nav.top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 26px 40px; max-width: 1180px; margin: 0 auto;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; font-weight: 500; font-size: 15px; }
+  .logo-mark {
+    width: 44px; height: 44px;
+    background: var(--ink); color: var(--paper);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.1em;
+    border-radius: 50%;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav.top ul { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; font-size: 15px; color: var(--ink-2); }
+  nav.top ul a { text-decoration: none; }
+  nav.top ul a:hover { color: var(--rust); }
+  .nav-cta {
+    background: var(--ink); color: var(--paper);
+    padding: 10px 18px; border-radius: 999px; text-decoration: none; font-size: 14px;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .nav-cta:hover { background: var(--rust); }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  /* HERO */
+  .hero { padding: 40px 0 90px; position: relative; }
+  .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 60px; align-items: end; }
+  .eyebrow-row { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; color: var(--muted); }
+  .eyebrow-dot { width: 8px; height: 8px; background: var(--rust); border-radius: 50%; }
+  h1.hero-title {
+    font-family: 'Instrument Serif', 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: clamp(64px, 8vw, 120px);
+    line-height: 0.92;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+  h1.hero-title em { font-style: italic; color: var(--rust); }
+  .hero-sub {
+    font-size: 19px; line-height: 1.5; color: var(--ink-2); max-width: 440px;
+    margin-top: 30px;
+  }
+  .hero-sub b { font-weight: 500; }
+  .hero-actions { margin-top: 34px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .btn {
+    padding: 14px 22px; border-radius: 999px; font-size: 15px; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 10px; border: 1px solid transparent;
+  }
+  .btn-primary { background: var(--rust); color: var(--paper); }
+  .btn-primary:hover { background: #b24420; }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn-ghost:hover { background: var(--ink); color: var(--paper); }
+  .arrow { display: inline-block; transition: transform .2s; }
+  .btn:hover .arrow { transform: translateX(3px); }
 
-.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(.22,1,.36,1); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.15s; }
-.reveal-delay-2 { transition-delay: 0.3s; }
-.reveal-delay-3 { transition-delay: 0.45s; }
+  .hero-portrait {
+    position: relative;
+    padding-left: 40px;
+  }
+  .portrait-card {
+    background: var(--ink); color: var(--paper);
+    border-radius: 4px;
+    padding: 26px 28px 22px;
+    box-shadow: 0 30px 60px -30px rgba(30,30,38,0.4);
+    transform: rotate(1deg);
+    position: relative;
+  }
+  .pc-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid #3a3a46; margin-bottom: 12px; }
+  .pc-status { display: inline-flex; align-items: center; gap: 8px; font-family: 'Geist Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #d9d2c0; }
+  .pc-status .dot { width: 8px; height: 8px; border-radius: 50%; background: #7ac28c; box-shadow: 0 0 0 3px rgba(122,194,140,0.2); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 8px 0 4px; }
+  .stat-cell { padding: 22px 18px; border-bottom: 1px dashed #3a3a46; border-right: 1px dashed #3a3a46; display: flex; flex-direction: column; gap: 6px; }
+  .stat-cell:nth-child(2n) { border-right: 0; }
+  .stat-cell:nth-last-child(-n+2) { border-bottom: 0; }
+  .stat-num { font-family: 'Instrument Serif', serif; font-size: 38px; line-height: 1; letter-spacing: -0.01em; color: var(--paper); }
+  .stat-num em { font-size: 20px; color: var(--rust-soft); font-style: italic; margin-left: 2px; }
+  .stat-label { font-family: 'Geist Mono', monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: #b6ae9c; line-height: 1.3; }
+  .pc-foot { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-top: 16px; margin-top: 8px; border-top: 1px solid #3a3a46; }
+  .pc-foot > div { display: flex; flex-direction: column; gap: 4px; }
+  .pc-stat { font-family: 'Instrument Serif', serif; font-size: 26px; font-weight: 400; letter-spacing: -0.01em; color: var(--paper); }
 
-/* ── NAV ───────────────────────────────────────── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(12,15,26,0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 24px;
-}
-.nav-inner {
-  max-width: 1200px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: space-between;
-  height: 64px;
-}
-.nav-logo {
-  font-family: 'Syne', sans-serif;
-  font-size: 20px; font-weight: 800; color: var(--white);
-  display: flex; align-items: center; gap: 10px;
-}
-.nav-logo span { color: var(--amber); }
-.logo-icon { width: 32px; height: 32px; flex-shrink: 0; }
-.nav-links { display: flex; gap: 28px; align-items: center; }
-.nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.2s; }
-.nav-links a:hover { color: var(--white); }
-.nav-cta {
-  background: var(--amber); color: var(--ink); padding: 8px 20px;
-  border-radius: 8px; font-weight: 700; font-size: 14px; transition: all 0.2s;
-}
-.nav-cta:hover { background: var(--amber2); transform: translateY(-1px); }
+  /* Ribbon of quick facts */
+  .ribbon {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0;
+    margin-top: 20px;
+  }
+  .ribbon-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+  .ribbon-row > div { display: flex; align-items: baseline; gap: 12px; }
+  .rb-num { font-family: 'Instrument Serif', serif; font-size: 42px; line-height: 1; color: var(--ink); }
+  .rb-num em { color: var(--rust); font-style: italic; }
+  .rb-label { font-size: 13px; color: var(--muted); line-height: 1.3; }
 
-.nav-hamburger { display: none; }
+  /* Intro letter */
+  .letter { padding: 110px 0 90px; position: relative; }
+  .letter-grid { display: grid; grid-template-columns: 1fr 1.8fr; gap: 80px; align-items: start; }
+  .letter-label { position: sticky; top: 40px; }
+  .letter-label .mono { color: var(--muted); }
+  .letter-label .big { font-family: 'Instrument Serif', serif; font-size: 54px; line-height: 0.95; margin-top: 16px; letter-spacing: -0.01em;}
+  .letter-body p { font-size: 20px; line-height: 1.55; max-width: 58ch; margin: 0 0 22px; color: var(--ink-2); }
+  .letter-body p em { color: var(--rust); font-style: italic; font-family: 'Instrument Serif', serif; font-size: 1.05em; }
+  .sig { margin-top: 36px; display: flex; align-items: center; gap: 18px; }
+  .sig-name { font-family: 'Caveat', cursive; font-size: 38px; color: var(--ink); line-height: 1; }
+  .sig-meta { font-size: 13px; color: var(--muted); border-left: 1px solid var(--line); padding-left: 16px; }
+  .sig-meta b { display:block; color: var(--ink); font-weight: 500; }
 
-/* ── HERO ──────────────────────────────────────── */
-.hero {
-  padding: 140px 24px 100px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
-  width: 800px; height: 800px;
-  background: radial-gradient(circle, rgba(245,166,35,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
-.hero-tag {
-  display: inline-block;
-  background: rgba(245,166,35,0.1); border: 1px solid rgba(245,166,35,0.2);
-  padding: 6px 16px; border-radius: 100px;
-  font-size: 13px; font-weight: 600; color: var(--amber);
-  margin-bottom: 24px;
-  animation: fadeUp 0.8s ease both;
-}
-.hero h1 {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(36px, 6vw, 64px);
-  font-weight: 800; line-height: 1.1;
-  color: var(--white);
-  margin-bottom: 20px;
-  animation: fadeUp 0.8s ease 0.1s both;
-}
-.hero h1 em {
-  font-style: normal;
-  background: linear-gradient(135deg, var(--amber), #fbbf24);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.hero p {
-  max-width: 640px; margin: 0 auto 36px;
-  font-size: 18px; line-height: 1.7; color: var(--muted);
-  animation: fadeUp 0.8s ease 0.2s both;
-}
-.hero-buttons {
-  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
-  animation: fadeUp 0.8s ease 0.3s both;
-}
-.btn-primary {
-  background: var(--amber); color: var(--ink); padding: 14px 32px;
-  border-radius: 10px; font-weight: 700; font-size: 16px;
-  transition: all 0.2s; border: none; cursor: pointer;
-}
-.btn-primary:hover { background: var(--amber2); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(245,166,35,0.25); }
-.btn-ghost {
-  background: transparent; color: var(--white); padding: 14px 32px;
-  border-radius: 10px; font-weight: 600; font-size: 16px;
-  border: 1px solid rgba(255,255,255,0.15); cursor: pointer; transition: all 0.2s;
-}
-.btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+  /* SERVICES */
+  .services { padding: 80px 0; background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .sec-head { display: flex; align-items: end; justify-content: space-between; margin-bottom: 60px; gap: 40px; }
+  .sec-head .mono { color: var(--muted); margin-bottom: 14px; display: block; }
+  .sec-head h2 { font-family: 'Instrument Serif', serif; font-size: clamp(40px, 5vw, 64px); line-height: 1.02; margin: 0; letter-spacing: -0.01em; max-width: 780px; }
+  .sec-head h2 em { color: var(--rust); font-style: italic; }
+  .sec-head .aside { font-size: 15px; color: var(--muted); max-width: 280px; }
 
-/* ── TRUST BAR ─────────────────────────────────── */
-.trust-bar {
-  padding: 40px 24px;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.trust-inner {
-  max-width: 900px; margin: 0 auto;
-  display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
-  align-items: center;
-}
-.trust-item {
-  text-align: center;
-}
-.trust-number {
-  font-family: 'Syne', sans-serif;
-  font-size: 28px; font-weight: 800; color: var(--amber);
-}
-.trust-label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .svc-list { display: grid; grid-template-columns: 1fr; gap: 0; }
+  .svc {
+    display: grid;
+    grid-template-columns: 64px minmax(140px, 1.1fr) minmax(0, 2fr) minmax(160px, 220px);
+    column-gap: 36px;
+    row-gap: 8px;
+    align-items: start;
+    padding: 30px 8px;
+    border-top: 1px solid var(--line);
+    transition: background .2s;
+  }
+  .svc:last-child { border-bottom: 1px solid var(--line); }
+  .svc:hover { background: var(--cream-2); }
+  .svc-num { grid-column: 1; grid-row: 1; font-family: 'Instrument Serif', serif; font-size: 32px; color: var(--rust); font-style: italic; line-height: 1; padding-top: 4px; }
+  .svc-title { grid-column: 2; grid-row: 1; font-family: 'Instrument Serif', serif; font-size: 28px; line-height: 1.1; letter-spacing: -0.01em; }
+  .svc-desc { grid-column: 3; grid-row: 1; color: var(--ink-2); font-size: 16px; line-height: 1.55; min-width: 0; }
+  .svc-price { grid-column: 4; grid-row: 1; text-align: right; min-width: 0; }
+  .svc-price .amt { font-family: 'Instrument Serif', serif; font-size: 26px; color: var(--ink); white-space: nowrap; }
+  .svc-price .unit { display: block; font-size: 12px; color: var(--muted); font-family: 'Geist Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
 
-/* ── SECTION COMMONS ───────────────────────────── */
-.section { padding: 100px 24px; }
-.section-inner { max-width: 1100px; margin: 0 auto; }
-.section-tag {
-  display: inline-block;
-  background: rgba(245,166,35,0.1); border: 1px solid rgba(245,166,35,0.2);
-  padding: 5px 14px; border-radius: 100px;
-  font-size: 12px; font-weight: 600; color: var(--amber);
-  text-transform: uppercase; letter-spacing: 1px;
-  margin-bottom: 16px;
-}
-.section-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 800; line-height: 1.15;
-  color: var(--white);
-  margin-bottom: 16px;
-}
-.section-body { font-size: 16px; color: var(--muted); max-width: 640px; line-height: 1.7; }
+  /* PROCESS */
+  .process { padding: 110px 0; }
+  .process-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 60px;
+  }
+  .step {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 3px;
+    padding: 30px 28px 32px;
+    position: relative;
+  }
+  .step:nth-child(2) { transform: translateY(24px); }
+  .step:nth-child(3) { transform: translateY(-14px); background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .step-num {
+    font-family: 'Instrument Serif', serif; font-size: 64px; line-height: 1;
+    color: var(--rust); font-style: italic;
+  }
+  .step:nth-child(3) .step-num { color: var(--rust-soft); }
+  .step h3 { font-family: 'Instrument Serif', serif; font-size: 26px; margin: 18px 0 10px; letter-spacing: -0.01em; font-weight: 400; }
+  .step p { font-size: 15px; color: var(--ink-2); margin: 0; }
+  .step:nth-child(3) p { color: #c9c2b0; }
+  .step .time { margin-top: 18px; font-family: 'Geist Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+  .step:nth-child(3) .time { color: var(--rust-soft); }
 
-/* ── SERVICES GRID ─────────────────────────────── */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 48px;
-}
-.service-card {
-  background: var(--ink2);
-  border: 1px solid var(--border);
-  border-radius: var(--rlg);
-  padding: 32px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-.service-card:hover {
-  border-color: rgba(245,166,35,0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-}
-.service-card::after {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--amber), transparent);
-  opacity: 0; transition: opacity 0.3s;
-}
-.service-card:hover::after { opacity: 1; }
-.service-icon {
-  width: 48px; height: 48px;
-  background: rgba(245,166,35,0.1);
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-.service-card h3 {
-  font-family: 'Syne', sans-serif;
-  font-size: 20px; font-weight: 700; color: var(--white);
-  margin-bottom: 10px;
-}
-.service-card p {
-  font-size: 14px; color: var(--muted); line-height: 1.7;
-}
-.service-price {
-  margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);
-  font-size: 14px; color: var(--amber); font-weight: 700;
-}
+  /* WORKTRACK callout */
+  .wt-section { background: var(--ink); color: var(--paper); padding: 100px 0; position: relative; overflow: hidden; }
+  .wt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .wt-left .mono { color: var(--rust-soft); }
+  .wt-left h2 { font-family: 'Instrument Serif', serif; font-size: clamp(44px, 5.5vw, 72px); line-height: 1.02; margin: 16px 0 24px; letter-spacing: -0.02em; }
+  .wt-left h2 em { color: var(--rust-soft); font-style: italic; }
+  .wt-left p { font-size: 18px; line-height: 1.55; color: #c9c2b0; max-width: 46ch; }
+  .wt-link {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-top: 30px; padding: 14px 22px;
+    background: var(--rust); color: var(--paper); text-decoration: none; border-radius: 999px; font-size: 15px;
+  }
+  .wt-link:hover { background: var(--rust-soft); color: var(--ink); }
 
-/* ── HOW IT WORKS ──────────────────────────────── */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 32px;
-  margin-top: 48px;
-}
-.step {
-  text-align: center;
-  padding: 24px;
-}
-.step-number {
-  width: 48px; height: 48px; margin: 0 auto 16px;
-  background: var(--amber);
-  color: var(--ink);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Syne', sans-serif;
-  font-size: 20px; font-weight: 800;
-}
-.step h4 {
-  font-size: 16px; font-weight: 700; color: var(--white);
-  margin-bottom: 8px;
-}
-.step p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .wt-card {
+    background: #26262F; border: 1px solid #3a3a46; border-radius: 4px; padding: 32px;
+  }
+  .wt-card-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 18px; border-bottom: 1px solid #3a3a46; margin-bottom: 20px; }
+  .wt-card-head b { font-family: 'Instrument Serif', serif; font-size: 22px; font-weight: 400; }
+  .wt-card-head .pill { background: var(--rust); color: var(--paper); font-family: 'Geist Mono', monospace; font-size: 10px; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.08em;}
+  .feat { display: grid; grid-template-columns: 28px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px dashed #3a3a46; align-items: start; }
+  .feat:last-child { border-bottom: 0; }
+  .feat-ic { width: 22px; height: 22px; border: 1px solid var(--rust-soft); border-radius: 50%; display: grid; place-items: center; color: var(--rust-soft); font-size: 11px; }
+  .feat b { font-weight: 500; display: block; margin-bottom: 2px; }
+  .feat span { color: #a8a090; font-size: 14px; }
 
-/* ── PRICING ───────────────────────────────────── */
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 48px;
-}
-.pricing-card {
-  background: var(--ink2);
-  border: 1px solid var(--border);
-  border-radius: var(--rlg);
-  padding: 36px 32px;
-  position: relative;
-  transition: all 0.3s;
-}
-.pricing-card.featured {
-  border-color: var(--amber);
-  box-shadow: 0 0 60px rgba(245,166,35,0.08);
-}
-.pricing-card.featured::before {
-  content: 'Most Popular';
-  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-  background: var(--amber); color: var(--ink);
-  padding: 4px 16px; border-radius: 100px;
-  font-size: 12px; font-weight: 700;
-}
-.pricing-card:hover { transform: translateY(-4px); }
-.pricing-name {
-  font-family: 'Syne', sans-serif;
-  font-size: 22px; font-weight: 700; color: var(--white);
-  margin-bottom: 8px;
-}
-.pricing-desc { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
-.pricing-amount {
-  font-family: 'Syne', sans-serif;
-  font-size: 36px; font-weight: 800; color: var(--white);
-}
-.pricing-amount span { font-size: 16px; color: var(--muted); font-weight: 400; font-family: 'Bricolage Grotesque', sans-serif; }
-.pricing-list {
-  list-style: none; margin: 24px 0;
-  display: flex; flex-direction: column; gap: 10px;
-}
-.pricing-list li {
-  font-size: 14px; color: #b8bcd4;
-  padding-left: 24px;
-  position: relative;
-}
-.pricing-list li::before {
-  content: '✓';
-  position: absolute; left: 0;
-  color: var(--green); font-weight: 700;
-}
-.pricing-btn {
-  display: block; width: 100%; text-align: center;
-  padding: 14px; border-radius: 10px;
-  font-weight: 700; font-size: 15px;
-  border: none; cursor: pointer; transition: all 0.2s;
-}
-.pricing-btn-primary { background: var(--amber); color: var(--ink); }
-.pricing-btn-primary:hover { background: var(--amber2); }
-.pricing-btn-outline { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.15); }
-.pricing-btn-outline:hover { border-color: var(--amber); color: var(--amber); }
+  /* WHO */
+  .who { padding: 110px 0 80px; }
+  .who-head { max-width: 780px; margin-bottom: 60px; }
+  .who-head h2 { font-family: 'Instrument Serif', serif; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; margin: 14px 0 0; letter-spacing: -0.01em; }
+  .who-head h2 em { color: var(--rust); font-style: italic; }
+  .who-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .who-card {
+    aspect-ratio: 3/4;
+    border: 1px solid var(--line); border-radius: 3px;
+    padding: 18px; display: flex; flex-direction: column; justify-content: space-between;
+    background: var(--paper);
+    position: relative; overflow: hidden;
+  }
+  .who-card::before {
+    content: ""; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg, transparent 0 10px, rgba(201,83,42,0.04) 10px 11px);
+    pointer-events: none;
+  }
+  .who-card .mono { color: var(--muted); position: relative; }
+  .who-card .name { font-family: 'Instrument Serif', serif; font-size: 32px; line-height: 1; letter-spacing: -0.01em; position: relative;}
+  .who-card .desc { font-size: 13px; color: var(--muted); position: relative; }
+  .who-card:nth-child(2) { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .who-card:nth-child(2) .mono, .who-card:nth-child(2) .desc { color: #b6ae9c; }
+  .who-card:nth-child(7) { background: var(--rust); color: var(--paper); border-color: var(--rust); }
+  .who-card:nth-child(7) .mono, .who-card:nth-child(7) .desc { color: #f6dcc9; }
 
-/* ── WORKTRACK CALLOUT ─────────────────────────── */
-.callout {
-  background: linear-gradient(135deg, var(--ink2), rgba(245,166,35,0.05));
-  border: 1px solid rgba(245,166,35,0.15);
-  border-radius: var(--rlg);
-  padding: 48px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  margin-top: 48px;
-}
-@media (max-width: 768px) { .callout { grid-template-columns: 1fr; padding: 32px 24px; } }
-.callout-text h3 {
-  font-family: 'Syne', sans-serif;
-  font-size: 28px; font-weight: 800; color: var(--white);
-  margin-bottom: 12px;
-}
-.callout-text p { font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
-.callout-features {
-  display: flex; flex-direction: column; gap: 12px;
-}
-.callout-feat {
-  display: flex; align-items: center; gap: 12px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 14px 18px;
-}
-.callout-feat-icon {
-  width: 36px; height: 36px;
-  background: rgba(245,166,35,0.1);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px; flex-shrink: 0;
-}
-.callout-feat-text { font-size: 14px; color: #b8bcd4; }
-.callout-feat-text strong { color: var(--white); }
+  /* PRICING */
+  .pricing { padding: 110px 0 90px; background: var(--paper); border-top: 1px solid var(--line); }
+  .price-head { text-align: left; margin-bottom: 70px; max-width: 820px; }
+  .price-head h2 { font-family: 'Instrument Serif', serif; font-size: clamp(48px, 6vw, 80px); margin: 14px 0 18px; line-height: 1; letter-spacing: -0.02em;}
+  .price-head h2 em { color: var(--rust); font-style: italic; }
+  .price-head p { color: var(--ink-2); font-size: 18px; max-width: 56ch; margin: 0; }
 
-/* ── INDUSTRIES ────────────────────────────────── */
-.industry-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-  margin-top: 48px;
-}
-.industry-pill {
-  background: var(--ink2);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px 16px;
-  text-align: center;
-  transition: all 0.3s;
-}
-.industry-pill:hover { border-color: rgba(245,166,35,0.3); transform: translateY(-2px); }
-.industry-emoji { font-size: 32px; margin-bottom: 8px; }
-.industry-name { font-size: 14px; font-weight: 600; color: var(--white); }
+  .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: stretch; }
+  .plan {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 34px 30px 30px;
+    display: flex; flex-direction: column;
+    position: relative;
+  }
+  .plan.featured { background: var(--ink); color: var(--paper); border-color: var(--ink); transform: translateY(-14px); }
+  .plan-label { font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .plan.featured .plan-label { color: var(--rust-soft); }
+  .most-pop {
+    position: absolute; top: -14px; left: 30px;
+    background: var(--rust); color: var(--paper);
+    font-family: 'Caveat', cursive; font-size: 20px;
+    padding: 2px 14px; border-radius: 999px;
+    transform: rotate(-3deg);
+  }
+  .price-amt { font-family: 'Instrument Serif', serif; font-size: 76px; line-height: 1; margin: 24px 0 8px; letter-spacing: -0.02em; }
+  .price-amt .cur { font-size: 40px; vertical-align: top; margin-right: 2px; color: var(--muted); }
+  .plan.featured .price-amt .cur { color: #c9c2b0; }
+  .price-unit { font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .plan.featured .price-unit { color: #c9c2b0; }
+  .plan-tag { font-size: 15px; color: var(--ink-2); margin: 0 0 26px; min-height: 48px; }
+  .plan.featured .plan-tag { color: #c9c2b0; }
+  .plan-feats { list-style: none; margin: 0 0 28px; padding: 24px 0 0; border-top: 1px solid var(--line); flex: 1;}
+  .plan.featured .plan-feats { border-color: #3a3a46; }
+  .plan-feats li { padding: 8px 0; font-size: 15px; display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; color: var(--ink-2); }
+  .plan.featured .plan-feats li { color: #d4ccbb; }
+  .plan-feats li::before {
+    content: "✓"; color: var(--rust); font-size: 12px; margin-top: 3px;
+  }
+  .plan.featured .plan-feats li::before { color: var(--rust-soft); }
+  .plan-cta {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 14px 20px; border-radius: 999px;
+    border: 1px solid var(--ink); color: var(--ink); text-decoration: none; font-size: 14px;
+  }
+  .plan-cta:hover { background: var(--ink); color: var(--paper); }
+  .plan.featured .plan-cta { background: var(--rust); border-color: var(--rust); color: var(--paper); }
+  .plan.featured .plan-cta:hover { background: var(--rust-soft); color: var(--ink); border-color: var(--rust-soft); }
+  .plan .hand-note { position: absolute; right: -12px; top: 40%; color: var(--rust); font-family: 'Caveat', cursive; font-size: 22px; transform: rotate(8deg); }
 
-/* ── CONTACT / CTA ─────────────────────────────── */
-.cta-section {
-  padding: 100px 24px;
-  text-align: center;
-  background: linear-gradient(180deg, var(--ink) 0%, var(--ink2) 100%);
-  position: relative;
-}
-.cta-section::before {
-  content: '';
-  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(245,166,35,0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  max-width: 800px;
-  margin: 40px auto 0;
-}
-.contact-card {
-  background: var(--ink2);
-  border: 1px solid var(--border);
-  border-radius: var(--r);
-  padding: 24px;
-  text-align: center;
-  transition: all 0.3s;
-}
-.contact-card:hover { border-color: rgba(245,166,35,0.3); }
-.contact-icon { font-size: 28px; margin-bottom: 10px; }
-.contact-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-.contact-value { font-size: 15px; font-weight: 600; color: var(--white); }
-.contact-value a { color: var(--amber); }
-.contact-value a:hover { text-decoration: underline; }
+  /* CONTACT */
+  .contact { padding: 120px 0 100px; position: relative; }
+  .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; }
+  .contact h2 { font-family: 'Instrument Serif', serif; font-size: clamp(52px, 7vw, 96px); line-height: 0.98; margin: 16px 0 28px; letter-spacing: -0.02em; }
+  .contact h2 em { color: var(--rust); font-style: italic; }
+  .contact p.lead { font-size: 19px; color: var(--ink-2); max-width: 48ch; line-height: 1.55; }
+  .contact-card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 4px;
+    padding: 32px;
+  }
+  .contact-row {
+    display: grid; grid-template-columns: 36px 1fr auto; gap: 16px; align-items: center;
+    padding: 18px 0; border-bottom: 1px solid var(--line);
+  }
+  .contact-row:last-child { border-bottom: 0; }
+  .contact-row .label { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; display: block; }
+  .contact-row .val { font-family: 'Instrument Serif', serif; font-size: 22px; letter-spacing: -0.01em; }
+  .contact-row .val a { text-decoration: none; }
+  .contact-row .val a:hover { color: var(--rust); }
+  .contact-row .ic { width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; font-family: 'Geist Mono', monospace; font-size: 14px; color: var(--rust); }
+  .contact-row a.go {
+    text-decoration: none; font-size: 13px; color: var(--muted); font-family: 'Geist Mono', monospace;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .contact-row a.go:hover { color: var(--rust); }
 
-/* ── FOOTER ────────────────────────────────────── */
-footer {
-  padding: 40px 24px;
-  border-top: 1px solid var(--border);
-  text-align: center;
-}
-.footer-inner {
-  max-width: 1100px; margin: 0 auto;
-  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
-}
-.footer-brand {
-  font-family: 'Syne', sans-serif;
-  font-size: 16px; font-weight: 700; color: var(--white);
-}
-.footer-brand span { color: var(--amber); }
-.footer-links { display: flex; gap: 24px; }
-.footer-links a { font-size: 13px; color: var(--muted); transition: color 0.2s; }
-.footer-links a:hover { color: var(--white); }
-.footer-copy { font-size: 12px; color: var(--muted); width: 100%; text-align: center; margin-top: 16px; }
+  /* FOOTER */
+  footer {
+    padding: 40px 0 30px; border-top: 1px solid var(--line);
+  }
+  .foot { display: flex; justify-content: space-between; align-items: center; max-width: 1180px; margin: 0 auto; padding: 0 40px; color: var(--muted); font-size: 13px; }
+  .foot-links { display: flex; gap: 24px; }
+  .foot-links a { text-decoration: none; }
+  .foot-links a:hover { color: var(--rust); }
 
-/* ── MOBILE RESPONSIVE ─────────────────────────── */
-@media (max-width: 768px) {
-  /* Nav: show hamburger, hide links */
-  .nav-inner { padding: 0 20px; }
-  .nav-links { display: none; }
-  .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 60px; left: 0; right: 0; background: var(--ink); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 12px; z-index: 999; }
-  .nav-hamburger { display: flex !important; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 8px; }
-  .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+  /* Off-grid notes */
+  .note-absolute {
+    font-family: 'Caveat', cursive; color: var(--rust); font-size: 22px;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .note-arrow { width: 40px; height: 22px; }
 
-  /* Hero */
-  .hero { padding: 100px 20px 60px; }
-  .hero h1 { font-size: clamp(28px, 8vw, 42px); }
-  .hero p { font-size: 15px; }
-  .hero-buttons { flex-direction: column; align-items: center; gap: 12px; }
-  .btn-primary, .btn-ghost { width: 100%; max-width: 280px; text-align: center; }
-
-  /* Sections */
-  section { padding: 60px 20px !important; }
-
-  /* Grids → single column */
-  [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
-  .services-grid, .features-grid, .contact-grid { grid-template-columns: 1fr !important; }
-
-  /* Typography */
-  h2 { font-size: clamp(24px, 7vw, 36px) !important; }
-
-  /* Footer */
-  .footer-inner { flex-direction: column; text-align: center; }
-  .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
-}
-
-@media (max-width: 480px) {
-  .hero { padding: 88px 16px 48px; }
-  .hero h1 { font-size: clamp(26px, 9vw, 36px); letter-spacing: -0.5px; }
-  section { padding: 48px 16px !important; }
-  .contact-grid { grid-template-columns: 1fr !important; }
-  footer { padding: 32px 16px; }
-}
+  @media (max-width: 1024px) {
+    .svc {
+      grid-template-columns: 56px minmax(0, 1fr) minmax(140px, 180px);
+      column-gap: 28px;
+      row-gap: 12px;
+    }
+    .svc-num { grid-column: 1; grid-row: 1 / span 2; font-size: 28px; }
+    .svc-title { grid-column: 2; grid-row: 1; font-size: 24px; }
+    .svc-desc { grid-column: 2; grid-row: 2; }
+    .svc-price { grid-column: 3; grid-row: 1 / span 2; text-align: right; align-self: start; }
+  }
+  @media (max-width: 900px) {
+    .hero-grid, .letter-grid, .wt-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .ribbon-row { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .process-grid, .price-grid, .who-grid { grid-template-columns: 1fr; }
+    .step:nth-child(2), .step:nth-child(3), .plan.featured { transform: none; }
+  }
+  /* Phone (≤640px): collapse the nav link list, shrink .wrap padding so
+     sections stop overflowing, and let .contact-card rows fit in the
+     reduced content width without their grid cells exceeding min-content. */
+  @media (max-width: 640px) {
+    nav.top ul { display: none; }
+    .wrap { padding: 0 20px; }
+    .svc {
+      grid-template-columns: 44px minmax(0, 1fr);
+      column-gap: 16px;
+      row-gap: 10px;
+      padding: 26px 4px;
+    }
+    .svc-num { grid-column: 1; grid-row: 1; font-size: 24px; padding-top: 6px; }
+    .svc-title { grid-column: 2; grid-row: 1; font-size: 22px; }
+    .svc-desc { grid-column: 1 / -1; grid-row: 2; font-size: 15px; }
+    .svc-price { grid-column: 1 / -1; grid-row: 3; text-align: left; padding-top: 4px; }
+    .svc-price .amt { font-size: 22px; }
+    .contact-card { padding: 22px; }
+    .contact-row {
+      grid-template-columns: 28px minmax(0, 1fr) auto;
+      gap: 10px;
+      padding: 14px 0;
+    }
+    .contact-row .ic { width: 28px; height: 28px; font-size: 12px; }
+    .contact-row .val { font-size: 17px; overflow-wrap: break-word; }
+    .contact-row a.go { font-size: 11px; }
+  }
 </style>
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
-<nav>
-  <div class="nav-inner">
-    <div class="nav-logo">
-        <svg class="logo-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M25 18L55 12L62 42L45 62L18 52Z" stroke="#f5a623" stroke-width="2"/>
-          <path d="M25 18L62 42M55 12L18 52M45 62L25 18M55 12L45 62M62 42L18 52" stroke="#f5a623" stroke-width="1" opacity="0.4"/>
-          <circle cx="25" cy="18" r="5" stroke="#f5a623" stroke-width="1.5" fill="none"/>
-          <circle cx="55" cy="12" r="4" stroke="#f5a623" stroke-width="1.5" fill="none"/>
-          <circle cx="62" cy="42" r="5" stroke="#f5a623" stroke-width="1.5" fill="none"/>
-          <circle cx="45" cy="62" r="4.5" stroke="#f5a623" stroke-width="1.5" fill="none"/>
-          <circle cx="18" cy="52" r="3.5" stroke="#f5a623" stroke-width="1.5" fill="none"/>
-          <circle cx="40" cy="35" r="4" fill="#f5a623"/>
-        </svg>
-        <div><span>IT</span> for Small<br style="display:none;"/><span style="color:var(--amber);"> Businesses</span></div>
-      </div>
-    <div class="nav-links" id="navLinks">
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#worktrack">WorkTrack</a>
-      <a href="#contact" class="nav-cta">Get a Quote</a>
-    </div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+<nav class="top">
+  <div class="logo">
+    <div class="logo-mark">ITSMB</div>
+    <div>IT for Small Businesses<br><span class="mono" style="color:var(--muted); font-size:10px;">a WorkTrack Co.</span></div>
   </div>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">How it works</a></li>
+    <li><a href="#worktrack">WorkTrack</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Get a quote <span class="arrow">→</span></a>
 </nav>
-<script>
-  document.getElementById('navHamburger').addEventListener('click', function() {
-    document.getElementById('navLinks').classList.toggle('open');
-  });
-  document.querySelectorAll('#navLinks a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      document.getElementById('navLinks').classList.remove('open');
-    });
-  });
-</script>
 
-<!-- ═══ HERO ═══ -->
-<section class="hero">
-  <div class="hero-tag">Managed IT for Small Businesses</div>
-  <h1>Your IT department.<br/><em>Without the department.</em></h1>
-  <p>We set up your tech, keep it running, and fix it when it breaks. WorkTrack setup, device management, Wi-Fi, security, and support — all from one team that actually picks up the phone.</p>
-  <div class="hero-buttons">
-    <a href="#contact" class="btn-primary">Get a Free Quote</a>
-    <a href="#services" class="btn-ghost">See Services</a>
-  </div>
-</section>
-
-<!-- ═══ TRUST BAR ═══ -->
-<div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item reveal">
-      <div class="trust-number">24hr</div>
-      <div class="trust-label">Response Time</div>
-    </div>
-    <div class="trust-item reveal reveal-delay-1">
-      <div class="trust-number">0</div>
-      <div class="trust-label">Long-term Contracts</div>
-    </div>
-    <div class="trust-item reveal reveal-delay-2">
-      <div class="trust-number">100%</div>
-      <div class="trust-label">Remote Setup</div>
-    </div>
-    <div class="trust-item reveal reveal-delay-3">
-      <div class="trust-number">DFW</div>
-      <div class="trust-label">Based in Texas</div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ SERVICES ═══ -->
-<section id="services" class="section" style="background: var(--ink);">
-  <div class="section-inner">
-    <div class="section-tag reveal">What We Do</div>
-    <h2 class="section-title reveal">IT services that actually<br/>make sense for small business</h2>
-    <p class="section-body reveal">No enterprise jargon. No 50-page proposals. Just the tech your business needs to run, set up right and supported by real people.</p>
-
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-icon">⏱️</div>
-        <h3>WorkTrack Setup</h3>
-        <p>We configure WorkTrack for your business — employees, PINs, GPS geofencing, schedules, payroll reports. You're live in 48 hours, not weeks.</p>
-        <div class="service-price">From $500 one-time</div>
-      </div>
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon">🛡️</div>
-        <h3>Security & Backups</h3>
-        <p>Endpoint protection, automated backups, password management, and employee security training. Sleep at night knowing your data is safe.</p>
-        <div class="service-price">From $149/mo</div>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon">📶</div>
-        <h3>Network & Wi-Fi</h3>
-        <p>Business-grade Wi-Fi setup, guest networks, VPN configuration. We design networks that don't drop when 20 people connect at once.</p>
-        <div class="service-price">From $300 setup</div>
-      </div>
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon">💻</div>
-        <h3>Device Management</h3>
-        <p>Laptops, tablets, POS terminals, kiosks — we set them up, keep them updated, and replace them when they die. Remote or on-site.</p>
-        <div class="service-price">From $99/mo</div>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon">📧</div>
-        <h3>Email & Cloud</h3>
-        <p>Google Workspace or Microsoft 365 setup, migration, and management. Custom domains, shared drives, team calendars — done right.</p>
-        <div class="service-price">From $200 setup</div>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
-        <div class="service-icon">🆘</div>
-        <h3>On-Call Support</h3>
-        <p>Something broke? Call or text us. We fix it remotely within hours, or come on-site in DFW. No ticket systems, no runaround.</p>
-        <div class="service-price">From $199/mo</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ HOW IT WORKS ═══ -->
-<section class="section" style="background: var(--ink2);">
-  <div class="section-inner" style="text-align: center;">
-    <div class="section-tag reveal">How It Works</div>
-    <h2 class="section-title reveal">Up and running in 3 steps</h2>
-    <p class="section-body reveal" style="margin: 0 auto;">No 90-day onboarding. No "discovery phase." We learn your business, build your setup, and hand you the keys.</p>
-
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-number">1</div>
-        <h4>Free Consultation</h4>
-        <p>15-minute call. We learn what tech you have, what's broken, and what you need. No sales pitch.</p>
-      </div>
-      <div class="step reveal reveal-delay-1">
-        <div class="step-number">2</div>
-        <h4>We Build It</h4>
-        <p>WorkTrack configured, devices set up, network secured, email migrated. Most setups done in 48 hours.</p>
-      </div>
-      <div class="step reveal reveal-delay-2">
-        <div class="step-number">3</div>
-        <h4>Ongoing Support</h4>
-        <p>Optional monthly plan. We monitor, update, and fix things. You run your business, we run your tech.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ WORKTRACK CALLOUT ═══ -->
-<section id="worktrack" class="section" style="background: var(--ink);">
-  <div class="section-inner">
-    <div class="section-tag reveal">Our Flagship Product</div>
-    <h2 class="section-title reveal">Every client gets WorkTrack</h2>
-    <p class="section-body reveal">WorkTrack is our employee time tracking app — built for restaurants, field crews, and retail. Every IT services client gets it included or at a discount.</p>
-
-    <div class="callout reveal">
-      <div class="callout-text">
-        <h3>WorkTrack <span style="color: var(--amber);">SMB</span></h3>
-        <p>Enterprise time tracking without the enterprise price tag. GPS geofencing, shift scheduling, payroll reports, AI analytics — one-time payment, yours forever.</p>
-        <a href="https://worktracksmb.com" class="btn-primary" target="_blank">Visit WorkTrackSMB.com →</a>
-      </div>
-      <div class="callout-features">
-        <div class="callout-feat">
-          <div class="callout-feat-icon">📍</div>
-          <div class="callout-feat-text"><strong>GPS Geofencing</strong> — Employees can only clock in at the job site</div>
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow-row">
+          <span class="eyebrow-dot"></span>
+          <span class="mono">Managed IT · Dallas / Ft. Worth</span>
         </div>
-        <div class="callout-feat">
-          <div class="callout-feat-icon">📊</div>
-          <div class="callout-feat-text"><strong>Payroll Reports</strong> — Weekly hours & pay totals, ready for HR</div>
+        <h1 class="hero-title">Your IT<br>department.<br><em>Without the<br>department.</em></h1>
+        <p class="hero-sub">
+          We set up your tech, keep it running, and fix it when it breaks — <b>without</b> a ticket system, a sales pitch, or a 50-page proposal. You text Dennis. Dennis texts back.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Book a 15-min call <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="#services">What we do</a>
         </div>
-        <div class="callout-feat">
-          <div class="callout-feat-icon">📅</div>
-          <div class="callout-feat-text"><strong>Shift Scheduling</strong> — Drag-and-drop schedule builder</div>
-        </div>
-        <div class="callout-feat">
-          <div class="callout-feat-icon">🤖</div>
-          <div class="callout-feat-text"><strong>AI Assistant</strong> — Ask questions about your data in plain English</div>
+      </div>
+
+      <div class="hero-portrait">
+        <div class="portrait-card">
+          <div class="pc-head">
+            <span class="mono" style="color:#b6ae9c;">→ The numbers</span>
+            <span class="pc-status"><span class="dot"></span> Available</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-cell">
+              <span class="stat-num">24/7</span>
+              <span class="stat-label">Monitoring &amp; response</span>
+            </div>
+            <div class="stat-cell">
+              <span class="stat-num">&lt; 1<em>hr</em></span>
+              <span class="stat-label">Avg response time</span>
+            </div>
+            <div class="stat-cell">
+              <span class="stat-num">15+</span>
+              <span class="stat-label">Services covered</span>
+            </div>
+            <div class="stat-cell">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">No-contract clients</span>
+            </div>
+          </div>
+          <div class="pc-foot">
+            <div><span class="mono" style="color:#b6ae9c;">Based in</span><b class="pc-stat">Ennis, TX</b></div>
+            <div><span class="mono" style="color:#b6ae9c;">Serving</span><b class="pc-stat">DFW Metro</b></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</header>
+
+<!-- RIBBON -->
+<section class="ribbon">
+  <div class="ribbon-row">
+    <div>
+      <div class="rb-num"><em>24</em>hr</div>
+      <div class="rb-label">Response time<br>— or it's free.</div>
+    </div>
+    <div>
+      <div class="rb-num">0</div>
+      <div class="rb-label">Long-term contracts.<br>Cancel whenever.</div>
+    </div>
+    <div>
+      <div class="rb-num"><em>138</em></div>
+      <div class="rb-label">Small businesses<br>we've set up so far.</div>
+    </div>
+    <div>
+      <div class="rb-num">DFW</div>
+      <div class="rb-label">Based in Ennis.<br>We drive to you.</div>
+    </div>
+  </div>
 </section>
 
-<!-- ═══ INDUSTRIES ═══ -->
-<section class="section" style="background: var(--ink2);">
-  <div class="section-inner" style="text-align: center;">
-    <div class="section-tag reveal">Who We Serve</div>
-    <h2 class="section-title reveal">Built for businesses like yours</h2>
-    <p class="section-body reveal" style="margin: 0 auto;">We specialize in small businesses with 5–300 employees who need tech that works without a full-time IT person.</p>
-
-    <div class="industry-grid">
-      <div class="industry-pill reveal">
-        <div class="industry-emoji">🍽️</div>
-        <div class="industry-name">Restaurants</div>
+<!-- INTRO LETTER -->
+<section class="letter">
+  <div class="wrap">
+    <div class="letter-grid">
+      <div class="letter-label">
+        <span class="mono">Ch. 01 — A short note</span>
+        <div class="big">Hey.<br>I'm Dennis.</div>
       </div>
-      <div class="industry-pill reveal reveal-delay-1">
-        <div class="industry-emoji">🔧</div>
-        <div class="industry-name">Field Services</div>
-      </div>
-      <div class="industry-pill reveal reveal-delay-2">
-        <div class="industry-emoji">🏗️</div>
-        <div class="industry-name">Construction</div>
-      </div>
-      <div class="industry-pill reveal reveal-delay-3">
-        <div class="industry-emoji">🚗</div>
-        <div class="industry-name">Auto Shops</div>
-      </div>
-      <div class="industry-pill reveal">
-        <div class="industry-emoji">🏪</div>
-        <div class="industry-name">Retail</div>
-      </div>
-      <div class="industry-pill reveal reveal-delay-1">
-        <div class="industry-emoji">🏥</div>
-        <div class="industry-name">Medical Offices</div>
-      </div>
-      <div class="industry-pill reveal reveal-delay-2">
-        <div class="industry-emoji">🧹</div>
-        <div class="industry-name">Cleaning Crews</div>
-      </div>
-      <div class="industry-pill reveal reveal-delay-3">
-        <div class="industry-emoji">🏢</div>
-        <div class="industry-name">Small Offices</div>
+      <div class="letter-body">
+        <p>I started this because <em>I love IT customer support</em>.</p>
+        <p>What we are: <em>a small team</em> — me, two techs, and a scheduling coordinator — who set up small businesses the way we'd set up our own. Real phone numbers. Plain-English invoices. No ticket portals you have to log into to complain that your Wi-Fi is down.</p>
+        <p>What we aren't: an MSP. We don't want 400 clients. We want <em>forty clients we actually know the names of</em> — the shift managers, the POS that's always rebooting, the printer the staff has named.</p>
+        <p>If that sounds like your kind of IT, text me. If not, no hard feelings — <em>there's someone else out there for you</em> and they probably have a ticket portal.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ PRICING ═══ -->
-<section id="pricing" class="section" style="background: var(--ink);">
-  <div class="section-inner" style="text-align: center;">
-    <div class="section-tag reveal">Pricing</div>
-    <h2 class="section-title reveal">Simple pricing. No surprises.</h2>
-    <p class="section-body reveal" style="margin: 0 auto;">Pick a setup package, add monthly support if you want it. Cancel anytime — no contracts.</p>
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono">→ What we do</span>
+        <h2>Eight things we're <em>genuinely good at</em>, and zero things we'll fake.</h2>
+      </div>
+      <div class="aside">
+        If you need something outside this list, I'll tell you and recommend someone I trust. We'd rather lose the work than wing it.
+      </div>
+    </div>
 
-    <div class="pricing-grid">
-      <div class="pricing-card reveal">
-        <div class="pricing-name">Setup Only</div>
-        <div class="pricing-desc">One-time setup, no ongoing commitment</div>
-        <div class="pricing-amount">$500<span> one-time</span></div>
-        <ul class="pricing-list">
+    <div class="svc-list">
+      <div class="svc">
+        <div class="svc-num">01</div>
+        <div class="svc-title">WorkTrack<br>setup</div>
+        <div class="svc-desc">Employees, PINs, GPS geofences, schedules, payroll exports — configured for how your specific business actually runs. You're clocking in Tuesday.</div>
+        <div class="svc-price"><span class="amt">$500</span><span class="unit">One-time · 48 hr turnaround</span></div>
+      </div>
+      <div class="svc">
+        <div class="svc-num">02</div>
+        <div class="svc-title">Security<br>&amp; backups</div>
+        <div class="svc-desc">Endpoint protection, automated cloud backups, password manager rollout, and a 30-min "don't-click-that-email" training for the team.</div>
+        <div class="svc-price"><span class="amt">$149</span><span class="unit">/ month</span></div>
+      </div>
+      <div class="svc">
+        <div class="svc-num">03</div>
+        <div class="svc-title">Network<br>&amp; Wi-Fi</div>
+        <div class="svc-desc">Business-grade access points, guest networks that actually isolate, VPN for remote staff. We survey on-site before we quote — no guessing.</div>
+        <div class="svc-price"><span class="amt">$300+</span><span class="unit">Setup · hardware at cost</span></div>
+      </div>
+      <div class="svc">
+        <div class="svc-num">04</div>
+        <div class="svc-title">Device<br>management</div>
+        <div class="svc-desc">Laptops, tablets, POS terminals, kiosks — imaged, updated, inventoried, replaced when they die. Remote-first, on-site when it matters.</div>
+        <div class="svc-price"><span class="amt">$99</span><span class="unit">/ device / month</span></div>
+      </div>
+      <div class="svc">
+        <div class="svc-num">05</div>
+        <div class="svc-title">Email<br>&amp; cloud</div>
+        <div class="svc-desc">Google Workspace or Microsoft 365 — domain, migration, shared drives, group calendars. Set up once, handed over clean.</div>
+        <div class="svc-price"><span class="amt">$200+</span><span class="unit">Setup · per domain</span></div>
+      </div>
+      <div class="svc">
+        <div class="svc-num">06</div>
+        <div class="svc-title">On-call<br>support</div>
+        <div class="svc-desc">Text the number. We answer. Remote fix within hours — on-site same-day in DFW. No tickets, no queues, no IVR asking you to press 4.</div>
+        <div class="svc-price"><span class="amt">$199</span><span class="unit">/ month · unlimited</span></div>
+      </div>
+      <div class="svc">
+        <div class="svc-num">07</div>
+        <div class="svc-title">Website<br>build</div>
+        <div class="svc-desc">A clean, fast site that actually loads on phones — domain, hosting, SSL, contact form, Google Business setup. No drag-and-drop bloat. Ready in two weeks.</div>
+        <div class="svc-price"><span class="amt">From $500</span><span class="unit">One-time · 2 wk turnaround</span></div>
+      </div>
+      <div class="svc">
+        <div class="svc-num">08</div>
+        <div class="svc-title">Custom app<br>design</div>
+        <div class="svc-desc">A web or mobile app built around how your business actually runs — scheduling, intake, inventory, dashboards. Scoped together, shipped in phases, owned by you.</div>
+        <div class="svc-price"><span class="amt">Quote</span><span class="unit">On request · scoped to fit</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="process">
+  <div class="wrap">
+    <div class="sec-head" style="align-items: start;">
+      <div>
+        <span class="mono">→ How it works</span>
+        <h2>Three steps. No <em>discovery phase</em>. No 90-day onboarding.</h2>
+      </div>
+      <div class="aside">
+        <span class="hand" style="font-size: 22px;">most clients go live in under a week ↘</span>
+      </div>
+    </div>
+
+    <div class="process-grid">
+      <div class="step">
+        <div class="step-num">i.</div>
+        <h3>A 15-minute call</h3>
+        <p>You tell me what tech you have, what's broken, and what keeps waking you up at 3am. I take notes on actual paper. No sales pitch.</p>
+        <div class="time">Day 1 · Free</div>
+      </div>
+      <div class="step">
+        <div class="step-num">ii.</div>
+        <h3>We build it</h3>
+        <p>WorkTrack configured, devices imaged, network cleaned up, email migrated. Usually finished before the weekend. You get a PDF of what we touched.</p>
+        <div class="time">Day 2–5 · Fixed quote</div>
+      </div>
+      <div class="step">
+        <div class="step-num">iii.</div>
+        <h3>We stick around</h3>
+        <p>Optional monthly plan. We watch the boring stuff — updates, backups, weird login attempts — so you don't have to. Cancel any time.</p>
+        <div class="time">Day 6 → forever</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKTRACK -->
+<section id="worktrack" class="wt-section">
+  <div class="wrap">
+    <div class="wt-grid">
+      <div class="wt-left">
+        <span class="mono">→ Our flagship product</span>
+        <h2>Oh — and every client gets <em>WorkTrack</em>.</h2>
+        <p>WorkTrack is the time-tracking app we built because the ones we were installing for clients kept letting them down. GPS clock-in, shift scheduling, payroll reports, and an AI that answers "who was late last week?" in plain English.</p>
+        <p>If you're an IT client, it's included or heavily discounted. If you just want WorkTrack, it's sold on its own too.</p>
+        <a class="wt-link" href="https://worktracksmb.com" target="_blank" rel="noopener">Visit worktracksmb.com <span class="arrow">→</span></a>
+      </div>
+      <div class="wt-card">
+        <div class="wt-card-head">
+          <b>WorkTrack SMB</b>
+          <span class="pill">included</span>
+        </div>
+        <div class="feat">
+          <div class="feat-ic">◉</div>
+          <div><b>GPS geofencing</b><span>Crew can only clock in when they're actually at the job site.</span></div>
+        </div>
+        <div class="feat">
+          <div class="feat-ic">▤</div>
+          <div><b>Payroll reports</b><span>Weekly hours &amp; pay totals, ready to hand to HR or QuickBooks.</span></div>
+        </div>
+        <div class="feat">
+          <div class="feat-ic">▥</div>
+          <div><b>Shift scheduling</b><span>Drag-and-drop schedule builder your managers will actually use.</span></div>
+        </div>
+        <div class="feat">
+          <div class="feat-ic">✦</div>
+          <div><b>AI assistant</b><span>"Who missed their clock-out Tuesday?" — answer in plain English.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="who">
+  <div class="wrap">
+    <div class="who-head">
+      <span class="mono">→ Who we work with</span>
+      <h2>Businesses with <em>5–300 people</em>, no in-house IT, and no patience for jargon.</h2>
+    </div>
+    <div class="who-grid">
+      <div class="who-card">
+        <span class="mono">01</span>
+        <div>
+          <div class="name">Restaurants<br><em style="font-style:italic;color:var(--rust);">&amp; bars</em></div>
+          <div class="desc">POS + Wi-Fi that doesn't die at 7pm Saturday.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <span class="mono">02</span>
+        <div>
+          <div class="name">Field<br>services</div>
+          <div class="desc">Plumbers, electricians, HVAC — crews on the road, clocking in from trucks.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <span class="mono">03</span>
+        <div>
+          <div class="name">Construction<br>crews</div>
+          <div class="desc">Site-based GPS clock-in, safety compliance, multi-foreman scheduling.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <span class="mono">04</span>
+        <div>
+          <div class="name">Auto<br>shops</div>
+          <div class="desc">Tech-hour tracking, shop management software, 6+ printers that keep jamming.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <span class="mono">05</span>
+        <div>
+          <div class="name">Retail<br>&amp; boutique</div>
+          <div class="desc">Multi-location inventory, gift cards, staff scheduling, holiday spikes.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <span class="mono">06</span>
+        <div>
+          <div class="name">Medical<br>offices</div>
+          <div class="desc">HIPAA-aware setups, EHR support, quiet phones, zero downtime.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <span class="mono">07</span>
+        <div>
+          <div class="name">Cleaning<br>&amp; janitorial</div>
+          <div class="desc">Crews clocking in at client sites. Signed timesheets. Proof of work.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <span class="mono">08</span>
+        <div>
+          <div class="name">Small<br>offices</div>
+          <div class="desc">20-person CPA firm? Law office? Nonprofit? We're good.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing">
+  <div class="wrap">
+    <div class="price-head">
+      <span class="mono">→ Simple pricing</span>
+      <h2>Three plans. <em>Pick one.</em><br>Change your mind any time.</h2>
+      <p>No contracts, no auto-escalators, no mystery line items. Setup is one-time. Monthly support is optional. If we're not a fit after 30 days, we'll help you move to someone who is.</p>
+    </div>
+    <div class="price-grid">
+      <div class="plan">
+        <span class="plan-label">Setup only</span>
+        <div class="price-amt"><span class="cur">$</span>500</div>
+        <div class="price-unit">One-time payment</div>
+        <p class="plan-tag">Get configured, get trained, get out of your way.</p>
+        <ul class="plan-feats">
           <li>WorkTrack configured for your team</li>
-          <li>Employee PINs & GPS zones set up</li>
-          <li>Device configuration (up to 5)</li>
-          <li>1 hour of training</li>
-          <li>30-day email support</li>
+          <li>Employee PINs &amp; GPS zones mapped</li>
+          <li>Up to 5 devices set up</li>
+          <li>1 hour of live training (whole team)</li>
+          <li>30 days of email support</li>
         </ul>
-        <a href="#" onclick="openITSMBCheckout('setup_only');return false;" class="pricing-btn pricing-btn-outline">Get Started</a>
+        <a class="plan-cta" href="https://buy.stripe.com/3cIaEY1rP4n36I56x8fMA06" target="_blank" rel="noopener">Start with setup <span class="arrow">→</span></a>
       </div>
 
-      <div class="pricing-card featured reveal reveal-delay-1">
-        <div class="pricing-name">Setup + Support</div>
-        <div class="pricing-desc">Full setup plus ongoing monthly support</div>
-        <div class="pricing-amount">$199<span>/mo</span></div>
-        <ul class="pricing-list">
-          <li>Everything in Setup Only (included free)</li>
+      <div class="plan featured">
+        <span class="most-pop">← most folks pick this</span>
+        <span class="plan-label">Setup + support</span>
+        <div class="price-amt"><span class="cur">$</span>199<span style="font-size:22px;color:#c9c2b0;">/mo</span></div>
+        <div class="price-unit">Setup included · cancel anytime</div>
+        <p class="plan-tag">The one where Dennis actually picks up when you call.</p>
+        <ul class="plan-feats">
+          <li>Everything in Setup Only — free</li>
           <li>Unlimited remote support</li>
-          <li>Device monitoring & updates</li>
-          <li>Security & backup management</li>
-          <li>Priority response (< 4 hours)</li>
-          <li>Monthly health check report</li>
+          <li>Device monitoring &amp; auto-updates</li>
+          <li>Security &amp; backup management</li>
+          <li>Priority response · under 4 hours</li>
+          <li>Monthly health-check PDF</li>
         </ul>
-        <a href="#" onclick="openITSMBCheckout('setup_support');return false;" class="pricing-btn pricing-btn-primary">Get Started</a>
+        <a class="plan-cta" href="https://buy.stripe.com/cNifZi5I57zf3vT8FgfMA07" target="_blank" rel="noopener">Start the month <span class="arrow">→</span></a>
       </div>
 
-      <div class="pricing-card reveal reveal-delay-2">
-        <div class="pricing-name">Full Managed IT</div>
-        <div class="pricing-desc">We are your IT department</div>
-        <div class="pricing-amount">$499<span>/mo</span></div>
-        <ul class="pricing-list">
+      <div class="plan">
+        <span class="plan-label">Full managed IT</span>
+        <div class="price-amt"><span class="cur">$</span>499<span style="font-size:22px;color:var(--muted);">/mo</span></div>
+        <div class="price-unit">We are your IT department</div>
+        <p class="plan-tag">Hand us the keys. Go run your business.</p>
+        <ul class="plan-feats">
           <li>Everything in Setup + Support</li>
-          <li>Network design & management</li>
-          <li>Email & cloud administration</li>
+          <li>Network design &amp; management</li>
+          <li>Email &amp; cloud administration</li>
           <li>On-site visits (DFW area)</li>
-          <li>Vendor management</li>
-          <li>Dedicated account manager</li>
+          <li>Vendor &amp; hardware management</li>
+          <li>A dedicated account manager (hi)</li>
         </ul>
-        <a href="#" onclick="openITSMBCheckout('managed_it');return false;" class="pricing-btn pricing-btn-outline">Get Started</a>
+        <a class="plan-cta" href="https://buy.stripe.com/6oU4gAb2p1aR5E17BcfMA08" target="_blank" rel="noopener">Hand us the keys <span class="arrow">→</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CTA / CONTACT ═══ -->
-<section id="contact" class="cta-section">
-  <div style="position: relative; z-index: 1;">
-    <div class="section-tag reveal">Get Started</div>
-    <h2 class="section-title reveal">Ready to stop being your own IT department?</h2>
-    <p class="section-body reveal" style="margin: 0 auto 12px; max-width: 560px;">Call, text, or email. We'll have a 15-minute conversation and tell you exactly what we'd do and what it costs. No pressure.</p>
-
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
     <div class="contact-grid">
-      <div class="contact-card reveal">
-        <div class="contact-icon">📞</div>
-        <div class="contact-label">Call or Text</div>
-        <div class="contact-value"><a href="tel:+19724339181">(972) 433-9181</a></div>
+      <div>
+        <span class="mono">→ Let's talk</span>
+        <h2>Ready to stop being<br>your own <em>IT department?</em></h2>
+        <p class="lead">Call, text, or email. We'll answer — or we'll text back within the hour. We'll have a 15-minute conversation, and we'll tell you exactly what it costs. No obligation, no follow-up drip campaign.</p>
+        <div style="margin-top:28px; font-family:'Caveat', cursive; color: var(--rust); font-size: 24px;">
+          — promise.
+        </div>
       </div>
-      <div class="contact-card reveal reveal-delay-1">
-        <div class="contact-icon">📧</div>
-        <div class="contact-label">Email</div>
-        <div class="contact-value"><a href="mailto:support@worktracksmb.com">support@worktracksmb.com</a></div>
-      </div>
-      <div class="contact-card reveal reveal-delay-2">
-        <div class="contact-icon">🌐</div>
-        <div class="contact-label">WorkTrack Product</div>
-        <div class="contact-value"><a href="https://worktracksmb.com" target="_blank">worktracksmb.com</a></div>
+      <div class="contact-card">
+        <div class="contact-row">
+          <div class="ic">☎</div>
+          <div>
+            <span class="label">Call or text</span>
+            <div class="val"><a href="tel:+19724339181">(972) 433-9181</a></div>
+          </div>
+          <a class="go" href="tel:+19724339181">dial →</a>
+        </div>
+        <div class="contact-row">
+          <div class="ic">✉</div>
+          <div>
+            <span class="label">Email</span>
+            <div class="val"><a href="mailto:support@worktracksmb.com">support@worktracksmb.com</a></div>
+          </div>
+          <a class="go" href="mailto:support@worktracksmb.com">write →</a>
+        </div>
+        <div class="contact-row">
+          <div class="ic">◉</div>
+          <div>
+            <span class="label">In person (DFW only)</span>
+            <div class="val">Ennis, TX</div>
+          </div>
+          <a class="go" href="https://www.google.com/maps/place/Ennis,+TX" target="_blank" rel="noopener">map →</a>
+        </div>
+        <div class="contact-row">
+          <div class="ic">✦</div>
+          <div>
+            <span class="label">WorkTrack product</span>
+            <div class="val"><a href="https://worktracksmb.com" target="_blank" rel="noopener">worktracksmb.com</a></div>
+          </div>
+          <a class="go" href="https://worktracksmb.com" target="_blank" rel="noopener">visit →</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-        <svg style="width:24px;height:24px;vertical-align:middle;margin-right:8px;display:inline-block;" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M25 18L55 12L62 42L45 62L18 52Z" stroke="#f5a623" stroke-width="2"/>
-          <circle cx="25" cy="18" r="5" stroke="#f5a623" stroke-width="1.5" fill="none"/>
-          <circle cx="55" cy="12" r="4" stroke="#f5a623" stroke-width="1.5" fill="none"/>
-          <circle cx="62" cy="42" r="5" stroke="#f5a623" stroke-width="1.5" fill="none"/>
-          <circle cx="45" cy="62" r="4.5" stroke="#f5a623" stroke-width="1.5" fill="none"/>
-          <circle cx="18" cy="52" r="3.5" stroke="#f5a623" stroke-width="1.5" fill="none"/>
-          <circle cx="40" cy="35" r="4" fill="#f5a623"/>
-        </svg><span>IT</span> for Small <span>Businesses</span>
-      </div>
-    <div class="footer-links">
+  <div class="foot">
+    <div>© 2026 IT for Small Businesses — a WorkTrack company · Ennis, TX</div>
+    <div class="foot-links">
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
-      <a href="https://worktracksmb.com" target="_blank">WorkTrack</a>
+      <a href="https://worktracksmb.com" target="_blank" rel="noopener">WorkTrack</a>
       <a href="#contact">Contact</a>
     </div>
-    <div class="footer-copy">© 2026 IT for Small Businesses, an ITSMB Company. WorkTrack is a registered product of ITSMB.</div>
   </div>
 </footer>
-
-<script>
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-</script>
-
-
-<div id="itsmb-overlay" style="position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.9);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;">
-  <div style="position:relative;background:#0f1117;border:1px solid rgba(255,153,0,0.25);border-radius:20px;width:100%;max-width:560px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,0.8);">
-    <button onclick="closeITSMBCheckout()" style="position:absolute;top:14px;right:14px;background:rgba(255,255,255,0.08);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:18px;cursor:pointer;z-index:10;line-height:34px;text-align:center;">&#x2715;</button>
-    <div style="padding:22px 22px 6px;">
-      <div style="font-weight:800;font-size:17px;color:#fff;">&#x1F512; Secure Checkout</div>
-      <p style="color:#888;font-size:12px;margin:4px 0 0;">Powered by Stripe &middot; SSL Encrypted</p>
-    </div>
-    <div id="itsmb-body" style="padding:0 14px 22px;min-height:260px;">
-      <div id="itsmb-spin" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 0;gap:14px;">
-        <div style="width:38px;height:38px;border:3px solid rgba(255,153,0,0.15);border-top-color:#ff9900;border-radius:50%;animation:itsmb-spin 0.7s linear infinite;"></div>
-        <span style="color:#888;font-size:13px;">Preparing secure checkout...</span>
-      </div>
-    </div>
-  </div>
-</div>
-<style>
-@keyframes itsmb-spin{to{transform:rotate(360deg)}}
-#itsmb-overlay{display:none}
-#itsmb-overlay.open{display:flex}
-</style>
-<script src="https://js.stripe.com/v3/"></script>
-<script>
-var _iss=null,_isi=null;
-function _issStripe(){if(!_iss)_iss=Stripe('pk_live_51TFgf8KnbiTjogJTiYbfvk0w2ILh3iZKn4q9Z4vz9Ctt7wMFFG7iEd55eQG1gNBk1aJSDl6fl9J7Lij2k6JemRbA00t6dOCUIo');return _iss;}
-function closeITSMBCheckout(){
-  var o=document.getElementById('itsmb-overlay');
-  if(o)o.classList.remove('open');
-  document.body.style.overflow='';
-  if(_isi){_isi.destroy();_isi=null;}
-  var m=document.getElementById('itsmb-mount');if(m)m.remove();
-  var s=document.getElementById('itsmb-spin');if(s)s.style.display='flex';
-}
-async function openITSMBCheckout(plan){
-  var o=document.getElementById('itsmb-overlay'),b=document.getElementById('itsmb-body'),s=document.getElementById('itsmb-spin');
-  if(!o)return;
-  o.classList.add('open');
-  document.body.style.overflow='hidden';
-  if(s)s.style.display='flex';
-  var prev=document.getElementById('itsmb-mount');if(prev)prev.remove();
-  if(_isi){_isi.destroy();_isi=null;}
-  try{
-    var r=await fetch('/.netlify/functions/create-checkout-session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({plan:plan})});
-    var d=await r.json();
-    if(d.error)throw new Error(d.error);
-    if(s)s.style.display='none';
-    var m=document.createElement('div');m.id='itsmb-mount';b.appendChild(m);
-    _isi=await _issStripe().initEmbeddedCheckout({fetchClientSecret:function(){return Promise.resolve(d.clientSecret);}});
-    _isi.mount('#itsmb-mount');
-  }catch(e){
-    if(s)s.innerHTML='<p style="color:#f87171;text-align:center;padding:30px 16px;">Unable to load checkout. Call <a href="tel:+19724339181" style="color:#ff9900;">(972) 433-9181</a></p>';
-    console.error('Checkout error:',e);
-  }
-}
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeITSMBCheckout();});
-document.getElementById('itsmb-overlay').addEventListener('click',function(e){if(e.target===this)closeITSMBCheckout();});
-</script>
 
 </body>
 </html>
