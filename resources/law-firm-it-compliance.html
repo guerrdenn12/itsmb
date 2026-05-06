@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Law Firm IT Compliance Basics for Solo and Small Firms</title>
+<meta name="description" content="Practical IT compliance for solo and small law firms — model rules, client confidentiality, document retention, encryption, and the controls that actually matter. No fearmongering." />
+<meta property="og:title" content="Law Firm IT Compliance Basics for Solo and Small Firms" />
+<meta property="og:description" content="Practical compliance for solo and small law firms — model rules, document retention, encryption." />
+<meta property="og:url" content="https://itforbusinesssmb.com/resources/law-firm-it-compliance" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://itforbusinesssmb.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="IT for Small Businesses" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Law Firm IT Compliance Basics for Solo and Small Firms" />
+<meta name="twitter:description" content="Practical IT compliance for solo and small law firms." />
+<meta name="twitter:image" content="https://itforbusinesssmb.com/og-image.png" />
+<link rel="canonical" href="https://itforbusinesssmb.com/resources/law-firm-it-compliance" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://itforbusinesssmb.com/"},
+  {"@type":"ListItem","position":2,"name":"Resources","item":"https://itforbusinesssmb.com/resources/"},
+  {"@type":"ListItem","position":3,"name":"Law firm IT compliance","item":"https://itforbusinesssmb.com/resources/law-firm-it-compliance"}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article",
+ "headline":"Law firm IT compliance basics for solo and small firms",
+ "description":"Practical IT compliance for solo and small law firms.",
+ "author":{"@type":"Organization","name":"IT for Small Businesses","url":"https://itforbusinesssmb.com/"},
+ "publisher":{"@id":"https://itforbusinesssmb.com/#business"},
+ "datePublished":"2026-05-05","dateModified":"2026-05-05",
+ "mainEntityOfPage":"https://itforbusinesssmb.com/resources/law-firm-it-compliance",
+ "image":"https://itforbusinesssmb.com/og-image.png"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F3ECDE;--ink:#1E1E26;--ink-2:#2A2A34;--paper:#FBF7EE;--rust:#C9532A;--muted:#6A6458;--line:#D6CBB1}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--cream);color:var(--ink);font-family:'Geist',system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.mono{font-family:'Geist Mono',ui-monospace,monospace;font-size:0.78em;font-weight:500;letter-spacing:0.02em;text-transform:uppercase}
+.wrap{max-width:780px;margin:0 auto;padding:0 40px}
+.wrap-wide{max-width:1180px;margin:0 auto;padding:0 40px}
+nav.top{display:flex;align-items:center;justify-content:space-between;padding:26px 40px;max-width:1180px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:12px;font-weight:500;font-size:15px;text-decoration:none}
+.logo-mark{width:44px;height:44px;background:var(--ink);color:var(--paper);display:inline-flex;align-items:center;justify-content:center;font-family:'Geist Mono',monospace;font-size:9px;font-weight:600;letter-spacing:0.1em;border-radius:50%}
+nav.top ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;font-size:15px;color:var(--ink-2)}
+nav.top ul a{text-decoration:none}
+nav.top ul a:hover{color:var(--rust)}
+.nav-cta{background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:999px;text-decoration:none;font-size:14px}
+.nav-cta:hover{background:var(--rust)}
+.crumb{padding:20px 0;color:var(--muted);font-size:13px}
+.crumb a{text-decoration:none;color:var(--muted)}
+.crumb a:hover{color:var(--rust)}
+.article-head{padding:30px 0 40px}
+.article-meta{font-family:'Geist Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px}
+.article-head h1{font-family:'Instrument Serif','Times New Roman',serif;font-weight:400;font-size:clamp(40px,5vw,64px);line-height:1.05;margin:0;letter-spacing:-0.02em}
+.article-head h1 em{font-style:italic;color:var(--rust)}
+article{padding:20px 0 60px;font-size:18px;line-height:1.7;color:var(--ink-2)}
+article p{margin:0 0 22px}
+article h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1.15;margin:42px 0 16px;letter-spacing:-0.01em;color:var(--ink)}
+article h2 em{font-style:italic;color:var(--rust)}
+article h3{font-family:'Instrument Serif',serif;font-weight:400;font-size:22px;line-height:1.2;margin:30px 0 10px;color:var(--ink)}
+article ul{margin:0 0 22px;padding-left:20px}
+article li{margin:0 0 10px}
+article strong{color:var(--ink);font-weight:500}
+article em{color:var(--rust);font-style:italic}
+.callout{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--rust);border-radius:6px;padding:20px 24px;margin:30px 0;font-size:16px}
+.callout p{margin:0}
+.disclaimer{background:#fbf3ed;border:1px solid #e8d3bf;border-radius:6px;padding:16px 20px;margin:30px 0;font-size:14px;color:var(--ink-2)}
+.disclaimer p{margin:0}
+.cta-row{padding:50px 0 90px;text-align:center;border-top:1px solid var(--line)}
+.cta-row h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:0 0 24px;letter-spacing:-0.02em}
+.cta-row h2 em{font-style:italic;color:var(--rust)}
+.btn{padding:14px 22px;border-radius:999px;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;border:1px solid transparent}
+.btn-primary{background:var(--rust);color:var(--paper)}
+.btn-primary:hover{background:#b24420}
+.related{padding:30px 0 60px;border-top:1px solid var(--line)}
+.related .lbl{font-family:'Geist Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;display:block;margin-bottom:14px}
+.related a{display:block;text-decoration:none;color:var(--ink);font-family:'Instrument Serif',serif;font-size:20px;line-height:1.3;margin-bottom:10px;letter-spacing:-0.01em}
+.related a:hover{color:var(--rust)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}
+footer .wrap-wide{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+footer a{color:var(--muted);text-decoration:none;margin-right:18px}
+footer a:hover{color:var(--rust)}
+@media(max-width:720px){nav.top ul{display:none}}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a class="logo" href="/"><span class="logo-mark">ITSMB</span><span>IT for Small Businesses<br><span class="mono" style="color:var(--muted); font-size:10px;">a WorkTrack Co.</span></span></a>
+  <ul>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/pricing">Pricing</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/resources">Resources</a></li>
+  </ul>
+  <a class="nav-cta" href="/#contact">Get a quote →</a>
+</nav>
+
+<div class="wrap crumb"><a href="/">Home</a> / <a href="/resources">Resources</a> / Law firm IT compliance</div>
+
+<header class="article-head wrap">
+  <div class="article-meta">Law firms · 6 min read · Updated May 2026</div>
+  <h1>Law firm IT compliance for <em>solo and small firms.</em></h1>
+</header>
+
+<article class="wrap">
+  <div class="disclaimer">
+    <p><strong>Note:</strong> we're an IT shop, not your bar association or your malpractice carrier. This is practical guidance, not legal advice. Always check with your state bar's ethics rules and your malpractice carrier's specific requirements.</p>
+  </div>
+
+  <p>Solo and small law firms have a problem that big firms don't. The compliance bar is the same — Model Rule 1.1 still requires "reasonable efforts" to maintain technological competence, Model Rule 1.6 still requires confidentiality safeguards, your state retention rules don't shrink because you only have three lawyers — but you don't have a CIO, a compliance officer, or an in-house security team to hand it off to.</p>
+
+  <p>Here's what actually matters and what to skip.</p>
+
+  <h2>What "reasonable efforts" looks like in practice</h2>
+
+  <p>ABA Model Rule 1.6(c) requires lawyers to "make reasonable efforts to prevent the inadvertent or unauthorized disclosure of, or unauthorized access to" client information. Texas Disciplinary Rule 1.05 mirrors this. "Reasonable" is intentionally vague but courts and bar opinions have given us decent boundaries:</p>
+
+  <ul>
+    <li>You don't have to use the most secure tools available</li>
+    <li>You do have to use tools that are <em>reasonable</em> for the sensitivity of the data</li>
+    <li>You should be able to articulate why you chose what you chose</li>
+    <li>If you delegate to a vendor (cloud storage, billing software), you have to do reasonable due diligence on them</li>
+  </ul>
+
+  <h2>The technology-competence baseline</h2>
+
+  <p>For a solo or small firm in 2026, "reasonable" technology safeguards generally means at minimum:</p>
+
+  <h3>Email and communications</h3>
+  <ul>
+    <li>Multi-factor authentication on every email account</li>
+    <li>Domain-level email security (SPF, DKIM, DMARC records configured)</li>
+    <li>A way to send encrypted email when transmitting truly sensitive information — built-in M365 message encryption is sufficient for most matters</li>
+    <li>Documented protocol for what kinds of communication go in email vs. a secure portal</li>
+  </ul>
+
+  <h3>Documents and case files</h3>
+  <ul>
+    <li>Client files stored in an access-controlled system (Microsoft 365, Google Workspace, Clio, MyCase, Smokeball, etc.) — not personal Dropbox or unmanaged file shares</li>
+    <li>Encryption at rest (your cloud provider almost certainly does this — verify)</li>
+    <li>Encryption in transit (HTTPS everywhere; verify your practice management tool)</li>
+    <li>Permissions sized to actual need — paralegals don't need access to every matter</li>
+    <li>Documented retention and destruction schedule per your state bar's rules (Texas: 5 years post-engagement minimum, often longer)</li>
+  </ul>
+
+  <h3>Devices</h3>
+  <ul>
+    <li>Full-disk encryption on every laptop (BitLocker, FileVault) — both are free and built in</li>
+    <li>A way to remotely wipe a lost device (Microsoft Intune, Google MDM, or Apple Business Manager)</li>
+    <li>Auto-updating operating systems and browsers</li>
+    <li>Endpoint protection (Defender for Business or equivalent)</li>
+  </ul>
+
+  <h3>Access and accounts</h3>
+  <ul>
+    <li>A team password manager (1Password, Bitwarden, Dashlane) — eliminates shared passwords</li>
+    <li>Documented offboarding for departing staff — accounts disabled, devices recovered, MFA seeds rotated</li>
+    <li>Separate admin and daily-use accounts for the firm owner</li>
+  </ul>
+
+  <h2>Cloud vendor due diligence</h2>
+
+  <p>When a state bar opinion says "reasonable due diligence on the vendor," what they mean in practice is:</p>
+
+  <ul>
+    <li>The vendor explicitly addresses confidentiality of client data in their terms</li>
+    <li>They publish security documentation (SOC 2 report, ISO 27001, or equivalent)</li>
+    <li>You can answer "where is my data physically stored, and who has access?" with a real answer</li>
+    <li>You have a path to retrieve all your data if you stop using the vendor</li>
+  </ul>
+
+  <p>Major practice-management vendors (Clio, MyCase, Smokeball, PracticePanther) all clear this bar. Generic consumer Dropbox or Google Drive used outside an organizational account often does not — not because the technology is bad, but because there's no contractual hook for confidentiality.</p>
+
+  <div class="callout">
+    <p><strong>Quick test:</strong> can you produce a written security overview of your firm's IT setup in 30 minutes? If the answer is no, your "reasonable efforts" defense gets harder if something goes wrong.</p>
+  </div>
+
+  <h2>The incident-response question</h2>
+
+  <p>When (not if) something goes wrong — a phishing click, a stolen laptop, an unauthorized email forwarding rule — your obligations under Rule 1.4 (communication with clients) and your state's data breach laws kick in fast. Texas Business and Commerce Code § 521.053 requires notification "without unreasonable delay" if personal information is exposed.</p>
+
+  <p>That means you need:</p>
+
+  <ul>
+    <li>A documented incident-response plan (who to call, in what order)</li>
+    <li>Logging that lets you actually reconstruct what happened</li>
+    <li>A relationship with a competent IT/security person <em>before</em> the incident — not on day one of the crisis</li>
+  </ul>
+
+  <h2>What's <em>not</em> required (yet)</h2>
+
+  <p>You don't currently need ISO 27001 certification, SOC 2 attestation, formal penetration testing, or a SIEM platform. Those are appropriate for firms handling truly sensitive matters at scale (mass tort, healthcare, regulatory work for public companies). For a five-lawyer general-practice firm, the baseline above plus working backups gets you "reasonable" defensibility.</p>
+
+  <h2>How we set up small Texas law firms</h2>
+
+  <p>Most of our small-firm clients in DFW end up with:</p>
+
+  <ul>
+    <li>Microsoft 365 Business Premium (built-in encryption, MFA, Intune device management, message encryption)</li>
+    <li>1Password Business or Bitwarden Teams</li>
+    <li>A practice-management tool the firm chose for its workflow (we don't push specific vendors here)</li>
+    <li>Datto SaaS Backup or Spanning for the M365 tenant</li>
+    <li>BitLocker on every laptop, encrypted USB drives, no consumer cloud sync</li>
+    <li>A one-page incident response plan in writing</li>
+    <li>Quarterly review of access lists and connected apps</li>
+  </ul>
+
+  <p>Total monthly cost for a 5-lawyer firm: typically $300–600. Less than one billable hour. Worth a lot more than that the first time something goes wrong.</p>
+</article>
+
+<section class="wrap related">
+  <span class="lbl">Related reading</span>
+  <a href="/resources/smb-cybersecurity-checklist">Small business cybersecurity checklist →</a>
+  <a href="/resources/backup-strategy">Small business backup strategy →</a>
+  <a href="/waxahachie">Managed IT for Waxahachie firms →</a>
+</section>
+
+<section class="wrap-wide cta-row">
+  <h2>Want a <em>compliance-aware</em> setup for your firm?</h2>
+  <a class="btn btn-primary" href="/#contact">Book a 15-min call →</a>
+</section>
+
+<footer>
+  <div class="wrap-wide">
+    <div>© IT for Small Businesses · Ennis, TX · Serving DFW Metro</div>
+    <div><a href="/">Home</a><a href="/services">Services</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/resources">Resources</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

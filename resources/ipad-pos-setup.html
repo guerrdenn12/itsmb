@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>iPad POS Setup Guide for Restaurants and Retail (No-Nonsense)</title>
+<meta name="description" content="Setting up iPads as POS terminals for restaurants and retail. Hardware, network, kiosk mode, MDM, payment terminal pairing, and the mistakes that cost you uptime." />
+<meta property="og:title" content="iPad POS Setup Guide for Restaurants and Retail" />
+<meta property="og:description" content="Hardware, network, MDM, and the mistakes that cost you uptime." />
+<meta property="og:url" content="https://itforbusinesssmb.com/resources/ipad-pos-setup" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://itforbusinesssmb.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="IT for Small Businesses" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="iPad POS Setup Guide for Restaurants and Retail" />
+<meta name="twitter:description" content="Hardware, network, MDM, and the mistakes that cost you uptime." />
+<meta name="twitter:image" content="https://itforbusinesssmb.com/og-image.png" />
+<link rel="canonical" href="https://itforbusinesssmb.com/resources/ipad-pos-setup" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://itforbusinesssmb.com/"},
+  {"@type":"ListItem","position":2,"name":"Resources","item":"https://itforbusinesssmb.com/resources/"},
+  {"@type":"ListItem","position":3,"name":"iPad POS setup","item":"https://itforbusinesssmb.com/resources/ipad-pos-setup"}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article",
+ "headline":"iPad POS setup guide for restaurants and retail",
+ "description":"Practical guide for setting up iPads as POS terminals.",
+ "author":{"@type":"Organization","name":"IT for Small Businesses","url":"https://itforbusinesssmb.com/"},
+ "publisher":{"@id":"https://itforbusinesssmb.com/#business"},
+ "datePublished":"2026-05-05","dateModified":"2026-05-05",
+ "mainEntityOfPage":"https://itforbusinesssmb.com/resources/ipad-pos-setup",
+ "image":"https://itforbusinesssmb.com/og-image.png"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F3ECDE;--ink:#1E1E26;--ink-2:#2A2A34;--paper:#FBF7EE;--rust:#C9532A;--muted:#6A6458;--line:#D6CBB1}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--cream);color:var(--ink);font-family:'Geist',system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.mono{font-family:'Geist Mono',ui-monospace,monospace;font-size:0.78em;font-weight:500;letter-spacing:0.02em;text-transform:uppercase}
+.wrap{max-width:780px;margin:0 auto;padding:0 40px}
+.wrap-wide{max-width:1180px;margin:0 auto;padding:0 40px}
+nav.top{display:flex;align-items:center;justify-content:space-between;padding:26px 40px;max-width:1180px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:12px;font-weight:500;font-size:15px;text-decoration:none}
+.logo-mark{width:44px;height:44px;background:var(--ink);color:var(--paper);display:inline-flex;align-items:center;justify-content:center;font-family:'Geist Mono',monospace;font-size:9px;font-weight:600;letter-spacing:0.1em;border-radius:50%}
+nav.top ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;font-size:15px;color:var(--ink-2)}
+nav.top ul a{text-decoration:none}
+nav.top ul a:hover{color:var(--rust)}
+.nav-cta{background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:999px;text-decoration:none;font-size:14px}
+.nav-cta:hover{background:var(--rust)}
+.crumb{padding:20px 0;color:var(--muted);font-size:13px}
+.crumb a{text-decoration:none;color:var(--muted)}
+.crumb a:hover{color:var(--rust)}
+.article-head{padding:30px 0 40px}
+.article-meta{font-family:'Geist Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px}
+.article-head h1{font-family:'Instrument Serif','Times New Roman',serif;font-weight:400;font-size:clamp(40px,5vw,64px);line-height:1.05;margin:0;letter-spacing:-0.02em}
+.article-head h1 em{font-style:italic;color:var(--rust)}
+article{padding:20px 0 60px;font-size:18px;line-height:1.7;color:var(--ink-2)}
+article p{margin:0 0 22px}
+article h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1.15;margin:42px 0 16px;letter-spacing:-0.01em;color:var(--ink)}
+article h2 em{font-style:italic;color:var(--rust)}
+article h3{font-family:'Instrument Serif',serif;font-weight:400;font-size:22px;line-height:1.2;margin:30px 0 10px;color:var(--ink)}
+article ul{margin:0 0 22px;padding-left:20px}
+article li{margin:0 0 10px}
+article strong{color:var(--ink);font-weight:500}
+article em{color:var(--rust);font-style:italic}
+.callout{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--rust);border-radius:6px;padding:20px 24px;margin:30px 0;font-size:16px}
+.callout p{margin:0}
+.cta-row{padding:50px 0 90px;text-align:center;border-top:1px solid var(--line)}
+.cta-row h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:0 0 24px;letter-spacing:-0.02em}
+.cta-row h2 em{font-style:italic;color:var(--rust)}
+.btn{padding:14px 22px;border-radius:999px;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;border:1px solid transparent}
+.btn-primary{background:var(--rust);color:var(--paper)}
+.btn-primary:hover{background:#b24420}
+.related{padding:30px 0 60px;border-top:1px solid var(--line)}
+.related .lbl{font-family:'Geist Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;display:block;margin-bottom:14px}
+.related a{display:block;text-decoration:none;color:var(--ink);font-family:'Instrument Serif',serif;font-size:20px;line-height:1.3;margin-bottom:10px;letter-spacing:-0.01em}
+.related a:hover{color:var(--rust)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}
+footer .wrap-wide{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+footer a{color:var(--muted);text-decoration:none;margin-right:18px}
+footer a:hover{color:var(--rust)}
+@media(max-width:720px){nav.top ul{display:none}}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a class="logo" href="/"><span class="logo-mark">ITSMB</span><span>IT for Small Businesses<br><span class="mono" style="color:var(--muted); font-size:10px;">a WorkTrack Co.</span></span></a>
+  <ul>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/pricing">Pricing</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/resources">Resources</a></li>
+  </ul>
+  <a class="nav-cta" href="/#contact">Get a quote →</a>
+</nav>
+
+<div class="wrap crumb"><a href="/">Home</a> / <a href="/resources">Resources</a> / iPad POS setup</div>
+
+<header class="article-head wrap">
+  <div class="article-meta">Restaurants &amp; retail · 6 min read · Updated May 2026</div>
+  <h1>iPad POS setup <em>without the headaches.</em></h1>
+</header>
+
+<article class="wrap">
+  <p>If you're running Square, Toast, Clover, Lightspeed, Stripe Terminal, or any other tablet-based POS, an iPad is probably your terminal. Set up wrong, it's the most fragile part of your business — battery dies mid-shift, software updates without warning, kid's TikTok shows up because the cashier shared the device. Set up right, it just works.</p>
+
+  <p>Here's how to set up iPads as POS terminals so they actually behave.</p>
+
+  <h2>Hardware: <em>which iPad</em>, and what to skip</h2>
+
+  <p>For most small business POS use:</p>
+
+  <ul>
+    <li><strong>iPad (10th gen) or iPad Air</strong> — sweet spot for most restaurants and retail. Plenty of horsepower, USB-C, decent battery life.</li>
+    <li><strong>iPad Mini</strong> — handheld order-taker on a busy floor, server-pocket-friendly.</li>
+    <li><strong>iPad Pro</strong> — rarely necessary for POS. Only if you're using it for graphics work too.</li>
+  </ul>
+
+  <p>Always buy the cellular model if you can afford the bump. The $130 one-time difference plus a cheap data plan ($10–15/month) gets you payment-terminal failover when your Wi-Fi has a bad day. That alone has saved at least one Saturday rush for every restaurant we've set up.</p>
+
+  <p>Skip the leasing programs from POS vendors. The hardware markup is significant and the locked-down configurations make troubleshooting harder. Buy direct from Apple Business or B&amp;H.</p>
+
+  <h2>Network: a separate POS Wi-Fi</h2>
+
+  <p>If you take one thing from this article, take this: <strong>your POS iPads should be on a different Wi-Fi network than your guest Wi-Fi and your office laptops.</strong> Same physical access point is fine — separate SSID and VLAN, with QoS prioritization for the POS network.</p>
+
+  <p>The reason is airtime contention. When 50 customer phones connect to your guest Wi-Fi during dinner rush, the POS competes for the same airtime if it's on the same SSID. Separate networks isolate the chaos.</p>
+
+  <p>We covered this in more depth in our <a href="/resources/restaurant-wifi-guide">restaurant Wi-Fi guide</a> — the same principles apply to retail.</p>
+
+  <h2>Mobile device management (MDM)</h2>
+
+  <p>Don't skip MDM. For more than two POS iPads, you want centralized control over:</p>
+
+  <ul>
+    <li>Which apps are installed (and which can't be)</li>
+    <li>Who can change settings</li>
+    <li>Whether the iPad can be put into Single App Mode or Guided Access (locked to just the POS app)</li>
+    <li>Remote wipe if a device is lost</li>
+    <li>Forced updates on a schedule that doesn't crash a Saturday</li>
+  </ul>
+
+  <p>Apple Business Manager is free. Pair it with Microsoft Intune (you probably already have M365), Jamf Now ($4/device/month), or Mosyle Business (also free for small fleets). Setup is one-time, payoff is forever.</p>
+
+  <div class="callout">
+    <p><strong>Single App Mode</strong> is the killer feature. The iPad literally cannot leave the POS app — no Safari, no app store, no Settings. Cashiers can't accidentally break things. Customers facing the device can't snoop. Set it once, forget it.</p>
+  </div>
+
+  <h2>Payment terminal pairing</h2>
+
+  <p>Most POS systems pair to a separate payment terminal — Square Reader, Toast Tap, Clover Mini, Stripe Reader. Setup tips most installers skip:</p>
+
+  <ul>
+    <li><strong>Pair via Bluetooth, not Wi-Fi, when possible.</strong> One less network hop, fewer failure modes.</li>
+    <li><strong>Enable cellular failover on the terminal itself</strong> if it supports it. Even if the iPad loses Wi-Fi, the terminal can still take cards.</li>
+    <li><strong>Keep a spare terminal in a drawer.</strong> $50–200 of insurance against a 90-minute outage.</li>
+    <li><strong>Document the pairing PIN/password.</strong> When the terminal needs to re-pair (after an update, after a battery swap), you want it to take 30 seconds, not 30 minutes of support calls.</li>
+  </ul>
+
+  <h2>Power: stop running on battery</h2>
+
+  <p>iPads last all day on battery. They don't last all day at full screen brightness running a POS app under fluorescent lights, with the screen on for 12 hours, with constant Bluetooth and Wi-Fi pings. Plug them in.</p>
+
+  <p>Use Apple's official 20W USB-C charger or a quality alternative (Anker, Belkin). Avoid bargain-bin USB chargers — they cause more weird POS problems than anything except bad Wi-Fi. Keep the cable run short and managed; loose cables are the #1 cause of "the iPad died" calls.</p>
+
+  <h2>The auto-update conversation</h2>
+
+  <p>iPads update themselves overnight by default. That's great for security, terrible for POS reliability — sometimes a major iOS update breaks compatibility with your POS app for a few days while the vendor catches up.</p>
+
+  <p>Through MDM, you can defer updates by 30–90 days, which lets the POS vendor verify compatibility before the OS hits your floor. Without MDM, your only options are leaving auto-update on (risky) or turning it off (also risky, since you stop getting security patches).</p>
+
+  <h2>What to test on opening day</h2>
+
+  <ul>
+    <li>Does the POS open and connect to the back-end without manual intervention?</li>
+    <li>Does the payment terminal pair and process a $1 test charge?</li>
+    <li>Does the iPad enter Single App Mode and stay there through a force-restart?</li>
+    <li>Does the kitchen printer (if any) print a test order?</li>
+    <li>Does cellular failover actually take over when you turn off Wi-Fi?</li>
+    <li>Can you remote-wipe the iPad from MDM?</li>
+  </ul>
+
+  <p>Run all six. Document results. Now you know what "working" looks like, so when something breaks at 7pm Saturday you can compare against a known-good baseline.</p>
+</article>
+
+<section class="wrap related">
+  <span class="lbl">Related reading</span>
+  <a href="/resources/restaurant-wifi-guide">Restaurant Wi-Fi that doesn't crash →</a>
+  <a href="/resources/smb-cybersecurity-checklist">Small business cybersecurity checklist →</a>
+  <a href="/mansfield">Managed IT in Mansfield →</a>
+</section>
+
+<section class="wrap-wide cta-row">
+  <h2>Want POS iPads <em>that just work</em>?</h2>
+  <a class="btn btn-primary" href="/#contact">Book a 15-min call →</a>
+</section>
+
+<footer>
+  <div class="wrap-wide">
+    <div>© IT for Small Businesses · Ennis, TX · Serving DFW Metro</div>
+    <div><a href="/">Home</a><a href="/services">Services</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/resources">Resources</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
